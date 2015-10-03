@@ -1,0 +1,29 @@
+<div org-menu ng-show="loggedUser.rol=='4'"></div>
+<div admin-header ng-if="loggedUser.rol=='1'"></div>
+<div class="container">
+    <div class="page-header">
+        <h2>FEEDBACK</h2>
+    </div>
+    <div class="ui cards">
+      <div class="card" ng-repeat='feedback in feedbacks'>
+        <div class="content">
+       
+          <div class="header">
+            {{feedback.name}}
+          </div>
+          <div class="meta">
+            {{feedback.date}}
+          </div>
+          <div class="description">
+            {{feedback.message}}
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="ui two buttons">
+            <div class="ui green button" ng-click="aproba(feedback.id,$index,1)" ng-class="feedback.businessOk=='1'?'':'basic'">Aproba</div>
+            <div class="ui red button" ng-click="aproba(feedback.id,$index,2)" ng-class="feedback.businessOk=='2'?'':'basic'">Declina</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

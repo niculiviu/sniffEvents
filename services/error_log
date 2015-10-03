@@ -1,0 +1,220 @@
+[16-Jul-2015 22:18:48 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 17
+[16-Jul-2015 22:18:48 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 17
+[16-Jul-2015 22:18:48 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 21
+[16-Jul-2015 22:18:48 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 21
+[16-Jul-2015 22:18:53 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 17
+[16-Jul-2015 22:18:53 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 17
+[16-Jul-2015 22:18:53 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 21
+[16-Jul-2015 22:18:53 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 21
+[16-Jul-2015 22:19:00 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[16-Jul-2015 22:19:00 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[16-Jul-2015 22:19:14 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 17
+[16-Jul-2015 22:19:14 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 17
+[16-Jul-2015 22:19:14 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 21
+[16-Jul-2015 22:19:14 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 21
+[16-Jul-2015 22:20:04 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 48
+[16-Jul-2015 22:20:04 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 48
+[16-Jul-2015 22:20:04 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 50
+[16-Jul-2015 22:20:04 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 50
+[16-Jul-2015 22:20:04 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 68
+[16-Jul-2015 22:20:04 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 68
+[16-Jul-2015 22:20:04 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 71
+[16-Jul-2015 22:20:04 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 71
+[16-Jul-2015 22:20:13 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 48
+[16-Jul-2015 22:20:13 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 48
+[16-Jul-2015 22:20:13 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 50
+[16-Jul-2015 22:20:13 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 50
+[16-Jul-2015 22:20:14 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 68
+[16-Jul-2015 22:20:14 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 68
+[16-Jul-2015 22:20:14 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 71
+[16-Jul-2015 22:20:14 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 71
+[16-Jul-2015 22:21:12 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 48
+[16-Jul-2015 22:21:12 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 48
+[16-Jul-2015 22:21:12 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 50
+[16-Jul-2015 22:21:12 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 50
+[16-Jul-2015 22:21:12 Europe/Bucharest] PHP Warning:  include_once(\shared\db.php): failed to open stream: No such file or directory in /home/asmiro/public_html/sniff/services/classes/user.php on line 68
+[16-Jul-2015 22:21:12 Europe/Bucharest] PHP Warning:  include_once(): Failed opening '\shared\db.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/asmiro/public_html/sniff/services/classes/user.php on line 68
+[16-Jul-2015 22:21:12 Europe/Bucharest] PHP Notice:  Undefined variable: handler in /home/asmiro/public_html/sniff/services/classes/user.php on line 71
+[16-Jul-2015 22:21:12 Europe/Bucharest] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/asmiro/public_html/sniff/services/classes/user.php on line 71
+[20-Jul-2015 11:54:19 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_hour' in 'field list'' in /home/asmiro/public_html/sniff/services/classes/event.php:56
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(56): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/updateEvent.php(30): Event->save('Cariere 2013', '2015-07-07T21:0...', '2015-07-29T21:0...', 44.435486, 26.099682, 'Facultatea de M...', 'fadsdsadasdsa', '2', '1', NULL, 'Strada Academie...', 1, '20:00', '10:36', '#cacaca', '4', '20', '00', '10', '36')
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 56
+[20-Jul-2015 11:59:41 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$start_hour in /home/asmiro/public_html/sniff/services/updateEvent.php on line 25
+[20-Jul-2015 11:59:41 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$start_minutes in /home/asmiro/public_html/sniff/services/updateEvent.php on line 26
+[20-Jul-2015 11:59:41 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$end_hour in /home/asmiro/public_html/sniff/services/updateEvent.php on line 27
+[20-Jul-2015 11:59:41 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$end_minutes in /home/asmiro/public_html/sniff/services/updateEvent.php on line 28
+[20-Jul-2015 11:59:41 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_hour' in 'field list'' in /home/asmiro/public_html/sniff/services/classes/event.php:56
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(56): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/updateEvent.php(30): Event->save('Ler Party', '2015-07-22', '2015-07-30', '44.429543', '26.100586', 'True Social Clu...', 'PENTRECERE DE C...', '6', '4', 'as-mi.ro', 'Strada Francez\xC4...', 0, '2015-07-16T18:5...', '2015-07-16T18:5...', '#cacaca', '7', NULL, NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 56
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 9
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 10
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 11
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 12
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 13
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 14
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 15
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 16
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 16
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 17
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 17
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 18
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 19
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 20
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 21
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 22
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 23
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 24
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 25
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 26
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 27
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/updateEvent.php on line 28
+[20-Jul-2015 11:59:54 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_hour' in 'field list'' in /home/asmiro/public_html/sniff/services/classes/event.php:56
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(56): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/updateEvent.php(30): Event->save(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 56
+[20-Jul-2015 12:00:14 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$start_hour in /home/asmiro/public_html/sniff/services/updateEvent.php on line 25
+[20-Jul-2015 12:00:14 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$start_minutes in /home/asmiro/public_html/sniff/services/updateEvent.php on line 26
+[20-Jul-2015 12:00:14 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$end_hour in /home/asmiro/public_html/sniff/services/updateEvent.php on line 27
+[20-Jul-2015 12:00:14 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$end_minutes in /home/asmiro/public_html/sniff/services/updateEvent.php on line 28
+[20-Jul-2015 12:00:14 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_hour' in 'field list'' in /home/asmiro/public_html/sniff/services/classes/event.php:56
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(56): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/updateEvent.php(30): Event->save('S.T.A.R.T 2015', NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', NULL, NULL, 0, NULL, NULL, '#cacaca', '6', NULL, NULL, NULL, NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 56
+[20-Jul-2015 12:01:54 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[20-Jul-2015 12:02:05 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[20-Jul-2015 12:02:46 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[20-Jul-2015 12:02:49 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[20-Jul-2015 13:50:18 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[20-Jul-2015 17:57:56 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[20-Jul-2015 17:58:58 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[20-Jul-2015 18:13:09 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[20-Jul-2015 18:13:20 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$org in /home/asmiro/public_html/sniff/services/checkOrg.php on line 7
+[03-Aug-2015 21:05:15 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'asmiro_mobi.user' doesn't exist' in /home/asmiro/public_html/sniff/services/classes/event.php:122
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(122): PDOStatement->execute()
+#1 /home/asmiro/public_html/sniff/services/getPublicEvents.php(5): Event->getPublishedEvents()
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 122
+[13-Sep-2015 15:47:29 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 15:47:29 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[13-Sep-2015 15:49:47 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 15:49:47 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[13-Sep-2015 15:53:51 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 15:53:51 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[13-Sep-2015 15:56:37 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 15:56:37 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[13-Sep-2015 16:11:00 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 16:11:00 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[13-Sep-2015 16:12:53 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 16:12:53 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[13-Sep-2015 16:18:50 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 16:18:50 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[13-Sep-2015 16:30:36 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 16:30:36 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[13-Sep-2015 16:33:35 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 6
+[13-Sep-2015 16:33:35 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/login.php on line 7
+[14-Sep-2015 00:52:01 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/getEventInfo.php on line 7
+[14-Sep-2015 00:52:02 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/getEventInfo.php on line 7
+[14-Sep-2015 00:52:04 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/getSchandule.php on line 7
+[14-Sep-2015 00:52:05 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/asmiro/public_html/sniff/services/getSchandule.php on line 7
+[14-Sep-2015 22:46:49 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 22:46:49 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 22:47:25 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 22:47:25 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 22:47:44 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 22:47:44 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:08:10 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:08:10 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:29:24 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:29:24 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:29:57 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:29:57 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:30:07 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:30:07 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:45:13 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:45:13 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:45:14 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:45:14 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:45:15 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:45:15 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:45:16 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:45:16 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:45:22 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:45:22 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69
+[14-Sep-2015 23:47:29 Europe/Bucharest] PHP Notice:  Undefined property: stdClass::$event in /home/asmiro/public_html/sniff/services/trimiteFeedback.php on line 9
+[14-Sep-2015 23:47:29 Europe/Bucharest] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'event_id' cannot be null' in /home/asmiro/public_html/sniff/services/classes/event.php:69
+Stack trace:
+#0 /home/asmiro/public_html/sniff/services/classes/event.php(69): PDOStatement->execute(Array)
+#1 /home/asmiro/public_html/sniff/services/trimiteFeedback.php(12): Event->insertFeedback('COOL', 'razvan', NULL)
+#2 {main}
+  thrown in /home/asmiro/public_html/sniff/services/classes/event.php on line 69

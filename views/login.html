@@ -1,0 +1,44 @@
+<div main-menu></div>
+<div class="ui green segment"  style="border-radius:0px;margin:0px;box-shadow:0px;">
+    <div class="container">
+        <h2>LOGIN</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-offset-3 col-sm-6">
+        
+    <div  style="margin-top:15%;">
+        
+        <div class="ui negative message" ng-show="no_user">
+          <i class="close icon"></i>
+          <div class="header">
+            Emailul pe care l-ati introdus nu se afla in baza de date!
+          </div>
+          <p>Va rugam sa verificati cu atentie.
+        </p></div>
+        <div class="ui negative message" ng-show="no_pass">
+          <i class="close icon"></i>
+          <div class="header">
+            Parola nu este corecta!
+          </div>
+          <p>Daca ati uitat parola va rugam contactati un administrator.
+        </p></div>
+        <h1 align="center" style="color:#21ba45;"><b>Bine ai venit</b> {{user.email}}!</h1>
+        <div class="ui green segment">
+            <div class="form-group ui fluid input">
+                <input placeholder="e-mail" ng-model="user.email">
+            </div>
+            <div class="form-group ui fluid input">
+                <input placeholder="Password" ng-model="user.pass" ng-enter="login(user)">
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="" class="ui green huge button" style="width:100%;" ng-click="login(user)">Login</a>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</div>

@@ -1,0 +1,210 @@
+<div admin-header></div>
+<div events-sidebar></div>
+<div class="col-sm-7 ui form">
+  
+    <div class="page-header">
+        <h2>Eveniment nou: <b>{{event.project_name}}</b></h2>
+    </div>
+     <div class="ui red message" ng-show="des">Scurta descriere e avenimentului este obligatorie</div>
+    <div class="ui red message" ng-show="title">Titlul evenimentului este obligatoriu</div>
+     <div class="ui red message" ng-show="col">Culoarea asociata proiectului este obligatorie</div>
+     <div class="ui red message" ng-show="startOrEnd">Data de start si de sfarsit este obligatorie.</div>
+     <div class="ui red message" ng-show="ora">Ora de inceput si de sfarsit este obligatorie</div>
+    <div class="ui red message" ng-show="loc">
+        Locatia este obligatorie
+    </div>
+    <div class="ui message" ng-show="draft_saved">
+        Evenimentul a fost salvat ca draft. Vrei sa te intorci la pagina de evenimente?
+       
+            <div class="ui tiny button" ng-click="draft_saved=false">Nu</div>
+            <a class="ui tiny blue button" href="#/events">Da</a>
+        
+       
+    </div>
+    <div class="ui green message" ng-show="success">
+        <i class="check icon"></i> Evenimentul va fi publicat dupa aprobarea unui admin 
+        
+    </div>
+    <div class="ui large fluid input">
+        <input type="text" placeholder="Nume Eveniment" ng-model="event.project_name">
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <select class="ui selection dropdown fluid " ng-model="event.org" style="margin-top:15px;padding:9px;"  ng-options="org.org_name for org in orgs track by org.id">
+                 
+            </select>
+            
+        </div>
+        <div class="col-sm-6">
+            <select class="ui selection dropdown fluid " ng-model="event.cat" style="margin-top:15px;padding:9px;"  ng-options="cat.categoryName for cat in categories track by cat.id">
+                
+            </select>
+        </div>
+    </div>
+    <div class="ui form"  style="margin-top:15px;">
+        <div class="field">
+            <textarea placeholder="Scurta Descriere" ng-model="event.description"></textarea>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="another example" style="margin-top:15px;">
+             <div class="ui labeled input">
+                <div class="ui label">
+                  <div class="well well-sm" style="margin:0px;background:{{event.color}}"></div>
+                </div>
+                <input type="text" placeholder="color in HEX" ng-model="event.color">
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="another example" style="margin-top:15px;">
+              <div class="ui labeled input">
+                <div class="ui label">
+                  <i class="facebook icon"></i>
+                </div>
+                <input type="text" placeholder="Project facebook page" ng-model="event.FbPage">
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="page-header">
+        <p>Data si ora evenimentului:</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="ui green message">Start: {{event.start_date | date:'dd-MM-yyyy'}} {{event.start_time | date:'shortTime' }}</div>
+            <p class="input-group">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="event.start_date" is-open="opened" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <input ng-model="event.start_hour" typeahead="ora for ora in ore | filter:$viewValue" placeholder="ora" numbers-only="numbers-only">
+                </div>
+                <div class="col-sm-6">
+                    <input ng-model="event.start_minutes" placeholder="minut" typeahead="minut for minut in minute | filter:$viewValue" numbers-only="numbers-only">
+                </div>
+            </div>
+            <!--<timepicker ng-model="event.start_time" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>-->
+
+            
+        </div>
+        <div class="col-sm-6">
+             <div class="ui green message">Final: {{event.end_date | date:'dd-MM-yyyy'}} {{event.end_time | date:'shortTime' }}</div>
+             <p class="input-group">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="event.end_date" is-open="opened" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <input ng-model="event.end_hour" typeahead="ora for ora in ore | filter:$viewValue" placeholder="ora" numbers-only="numbers-only">
+                </div>
+                <div class="col-sm-6">
+                    <input ng-model="event.end_minutes" placeholder="minut" typeahead="minut for minut in minute | filter:$viewValue" numbers-only="numbers-only">
+                </div>
+            </div>
+            <!--<timepicker ng-model="event.end_time" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>-->
+
+           
+        </div>
+    </div>
+    
+    <div class="page-header">
+        <p>Detalii despre locatie:</p>
+    </div>
+     <div id="map_canvas">
+        <script type="text/ng-template" id="searchbox.tpl.html">
+            <input type="text" placeholder="Cauta Locatia" style="left:0px !important;">
+        </script>
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+            <ui-gmap-search-box template="searchbox.template" events="searchbox.events"></ui-gmap-search-box>
+            <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+        </ui-gmap-marker>
+        </ui-gmap-google-map>
+    </div>
+    
+    <div class="page-header">
+        <p>Detalii despre program:</p>
+    </div>
+    <div class="ui segment">
+        <div class="row ui form">
+            <div class="col-sm-5">
+                <div style="display:inline-block;">
+      <datepicker ng-model="program.data" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)" style="margin:0px;"></datepicker>
+    </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="col-sm-12 field">
+                    <input placeholder="Detalii" ng-model="program.data | date" disabled />
+                </div>
+                <div class="row field">
+                    <div class="col-sm-6" >
+                        <input placeholder="Ora Inceput" ng-model="program.ora_inceput"  typeahead="ora for ora in ore | filter:$viewValue" />
+                    </div>
+                    <div class="col-sm-6">
+                        <input placeholder="Minute" ng-model="program.minute_inceput" typeahead="minut for minut in minute | filter:$viewValue" />
+                    </div>
+                </div>
+                <div class="row field">
+                    <div class="col-sm-6" >
+                        <input placeholder="Ora Sfarsit" ng-model="program.ora_sfarsit"  typeahead="ora for ora in ore | filter:$viewValue" />
+                    </div>
+                    <div class="col-sm-6">
+                        <input placeholder="Minute" ng-model="program.minute_sfarsit" typeahead="minut for minut in minute | filter:$viewValue" />
+                    </div>
+                </div>
+                <div class="col-sm-12 field">
+                    <input placeholder="Detalii" ng-model="program.detalii" />
+                </div>
+                <div class="col-sm-12">
+                    <button class="ui basic green button" ng-click="addToSchandule(program)"><i class="plus icon"></i> Adauga la program</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Ora</th>
+                <th>Detalii</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="s in schandule">
+                <td>{{s.s_date | date}}</td>
+                <td>{{s.start_hour}} - {{s.end_hour}}</td>
+                <td>{{s.s_desc}}</td>
+                <td><a href="" ng-click="deleteS(s.id,$index)" class="ui tiny icon basic button"><i class="remove icon"></i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-sm-3">
+    <div class="well well-sm" style="margin-top:15px;">
+        <table class="table table-striped table-hover ">
+            <tr>
+                <td>Autor:</td>
+                <td>{{event.first_name}} {{event.last_name}}</td>
+            </tr>
+            <tr>
+                <td>Status:</td>
+                <td><b ng-if="event.draft==0">Draft</b>
+                    <b ng-if="event.draft==1">Publicat</b>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <button class="ui fluid button" style="margin-bottom:10px;"  ng-click="save_draft(event)">Salveaza ca draft</button>
+        <button class="ui fluid blue button" ng-click="publish(event)">Publica</button>
+    </div>
+</div>

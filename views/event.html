@@ -1,0 +1,77 @@
+<div main-menu></div>
+<div class="ui green segment"  style="border-radius:0px;margin:0px;box-shadow:0px;">
+    <div class="container">
+        <h2 style="margin:0px;">{{event.project_name}}
+            <small>{{event.org_name}}</small>
+            <div class="pull-right">
+                <a href="" class="ui green button" ng-click="trimiteFeedback()">Trimite Feedback</a>
+            </div>
+        </h2>
+        <b><i class="pin icon"></i> {{event.location_name}}</b> {{event.address}}
+    </div>
+</div>
+<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+            <ui-gmap-search-box template="searchbox.template" events="searchbox.events"></ui-gmap-search-box>
+    <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+        </ui-gmap-marker>
+        </ui-gmap-google-map>
+
+<div class="ui green segment" style="border-radius:0px;margin:0px;box-shadow:0px;">
+    <div class="container">
+        <h3><i class="calendar icon"></i>{{event.start_date}} <small>{{event.start_time}}</small> - {{event.end_date}} <small>{{event.end_time}}</small></h3>
+    </div>
+    
+</div>
+
+<div class="ui container">
+    <div class="row" style="margin-top:20px;margin-bottom:70px;">
+        <div class="col-md-4" style="">
+        
+        <div class="ui minimal comments">
+          <h2 class="ui dividing header">Program</h2>
+          <div class="comment" ng-repeat="s in schandule">
+            <a class="avatar">
+              <img src="images/pro.png">
+            </a>
+            <div class="content">
+              <a class="author">{{s.start_hour}} - {{s.end_hour}}</a>
+              <div class="metadata">
+                <span class="date">{{s.s_date}}</span>
+              </div>
+              <div class="text">
+                {{s.s_desc}}
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="ui minimal comments">
+          <h2 class="ui dividing header">Feedback</h2>
+          <div class="comment" ng-repeat="feedback in feednbacks">
+            <a class="avatar">
+              <img src="images/profile.png">
+            </a>
+            <div class="content">
+              <a class="author">{{feedback.name}}</a>
+              <div class="metadata">
+                <span class="date">{{feedback.date}}</span>
+              </div>
+              <div class="text">
+                {{feedback.message}}
+              </div>
+              
+            </div>
+          </div>
+        </div>
+            
+        </div>
+        <div class="col-md-8">
+        
+        <h2 class="ui dividing header">Despre Eveniment:</h2>
+        <h3>{{event.description}}</h3>
+            
+        </div>
+    </div>
+</div>
+
+<div footer></div>

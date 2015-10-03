@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Sniffy</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/Semantic-UI-1.12.3/dist/semantic.css">
+      <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+      <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- endbuild -->
+  </head>
+  <body ng-app="sniffyApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    
+
+    
+      <div ng-view="" autoscroll="true"></div>
+    
+    
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+      
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=779924265357335";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/Chart.js/Chart.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/Semantic-UI-1.12.3/dist/semantic.min.js"></script>
+    <script src="bower_components/readonly/readonly.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+      <script src='http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&language=en&v=3.17'></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+      <script src='bower_components/lodash/lodash.min.js'></script>
+<script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+      <script src="bower_components/angularUtils/src/directives/pagination/dirPagination.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/events.js"></script>
+        <script src="scripts/controllers/newevent.js"></script>
+        <script src="scripts/controllers/editevent.js"></script>
+        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/controllers/newuser.js"></script>
+        <script src="scripts/controllers/edituser.js"></script>
+        <script src="scripts/controllers/organizations.js"></script>
+        <script src="scripts/controllers/neworganization.js"></script>
+        <script src="scripts/controllers/editorganization.js"></script>
+        <script src="scripts/controllers/feedbacks.js"></script>
+        <script src="scripts/controllers/viewfeedback.js"></script>
+        <script src="scripts/controllers/categories.js"></script>
+        <script src="scripts/controllers/newcategory.js"></script>
+        <script src="scripts/controllers/editcategory.js"></script>
+        <script src="scripts/controllers/howtouse.js"></script>
+        <script src="scripts/controllers/event.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/dasboard.js"></script>
+        <script src="scripts/controllers/businessdashboard.js"></script>
+        <script src="scripts/controllers/statistics.js"></script>
+        <script src="scripts/controllers/projectstatistics.js"></script>
+        <script src="scripts/controllers/eventstatistics.js"></script>
+        <script src="scripts/controllers/register.js"></script>
+        <script src="scripts/controllers/operatordashboard.js"></script>
+        <script src="scripts/services/userservice.js"></script>
+        <script src="scripts/directives/mainmenu.js"></script>
+        <script src="scripts/directives/adminheader.js"></script>
+        <script src="scripts/directives/userssidebar.js"></script>
+        <script src="scripts/directives/eventssidebar.js"></script>
+        <script src="scripts/directives/categoriessidebar.js"></script>
+        <script src="scripts/directives/organizationssidebar.js"></script>
+        <script src="scripts/services/orgservice.js"></script>
+        <script src="scripts/services/eventservice.js"></script>
+        <script src="scripts/controllers/public-events.js"></script>
+        <script src="scripts/directives/footer.js"></script>
+        <script src="scripts/controllers/ongzone.js"></script>
+        <script src="scripts/controllers/mobilezone.js"></script>
+        <script src="scripts/controllers/org.js"></script>
+        <script src="scripts/directives/semanticdropdown.js"></script>
+        <script src="scripts/directives/orgmenu.js"></script>
+      <script src="scripts/directives/onlyNumers.js"></script>
+        <script src="scripts/controllers/orgeditevent.js"></script>
+        <script src="scripts/controllers/edituserprofile.js"></script>
+        <script src="scripts/directives/readonlyselect.js"></script>
+      <script src="scripts/directives/ngenter.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,83 @@
+<div main-menu></div>
+<div class="ui green segment"  style="border-radius:0px;margin:0px;box-shadow:0px;">
+    <div class="container">
+        <h2>INREGISTRARE UTILIZATOR MOBILE</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="ui form" style="background:#fff;margin-top:15px;">
+    <div class="ui red message" ng-show="obligatoriu">
+                    Toate campurile sunt obligatorii
+                </div>
+                <div class="ui red message" ng-show="email">
+                    E-mail-ul nu este corect formatat
+                </div>
+                <div class="ui red message" ng-show="parola">
+                    Parolele nu se potrivesc
+                </div> 
+                <div class="ui green message" ng-show="success">
+                    Userul a fost adaugat, acum te poti loga pe mobile!
+                </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-3">
+            <label>Nume</label>
+            </div>
+            <div class="col-sm-9">
+                <input class="form-control" placeholder="nume" ng-model="user.nume">
+            </div>
+        </div>
+    
+    </div>
+    <div class="form-group">
+     <div class="row">
+            <div class="col-sm-3">
+            <label>Prenume</label>
+            </div>
+            <div class="col-sm-9">
+                <input class="form-control" placeholder="prenume" ng-model="user.prenume">
+            </div>
+        </div>
+    
+    </div>
+    <div class="form-group">
+   <div class="row">
+            <div class="col-sm-3">
+             <label>Email</label>
+            </div>
+            <div class="col-sm-9">
+                <input class="form-control" placeholder="email" ng-model="user.email">
+            </div>
+        </div>
+    
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-3">
+             <label>Parola</label>
+            </div>
+            <div class="col-sm-9">
+                <input class="form-control" placeholder="parola" ng-model="user.pass1">
+            </div>
+        </div>
+    </div>
+        <div class="form-group">
+        <div class="row">
+            <div class="col-sm-3">
+             <label>Parola inca odata</label>
+            </div>
+            <div class="col-sm-9">
+                <input class="form-control" placeholder="parola inca odata" ng-model="user.pass2">
+            </div>
+        </div>
+    </div>
+        <div class="modal-footer">
+    <button class="ui large blue button" ng-click="register(user)">Register</button>
+            </div>
+    </div>
+</div>
+
+
+
+
+

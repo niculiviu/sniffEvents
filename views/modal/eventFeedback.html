@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4>Feedback <small>{{event.project_name}}</small></h4>
+</div>
+<div class="modal-body">
+    <form class="ui form">
+        <div class="field">
+            <label>Feedbackul tau: *</label>
+            <textarea rows="3" ng-model="feedback.msg" placeholder="Feedback"> </textarea>
+        </div>
+        <div class="field">
+            <label>Nume</label>
+            <input ng-model="feedback.user" placeholder="Nume"/>
+            <div class="ui green message" align="center">Daca nu completezi acest camp feedback-ul tau va fi considerat anonim</div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="ui green basic button" ng-click='trimite(feedback)'>Trimite</div>
+</div>
