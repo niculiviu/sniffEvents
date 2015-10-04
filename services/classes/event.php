@@ -232,7 +232,7 @@
          echo json_encode($result);
         }
         public function getPublishedEvents(){
-         $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR
+         $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
             FROM event e, eventcategory c, organization o,user u
             WHERE 
             e.eventCategory = c.id AND 
@@ -248,7 +248,7 @@
         }
         
         public function getFavorites($user_id){
-            $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR
+            $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
             FROM event e, eventcategory c, organization o,user u, join_event j
             WHERE 
             e.eventCategory = c.id AND 
@@ -262,6 +262,79 @@
          
          echo json_encode($result);    
                 
+        }
+        
+        public function getEventsByCategory($id){
+            $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
+            FROM event e, eventcategory c, organization o,user u
+            WHERE 
+            e.eventCategory = c.id AND 
+            e.organizations_id=o.id AND 
+            e.CreatedBy=u.id AND e.draft=1 AND e.enabled=1 AND e.eventCategory=? AND
+            e.end_date>= NOW()";
+            $query=$this->handler->prepare($sql);
+            
+         $query->execute(array($id));
+         $result=$query->fetchAll(PDO::FETCH_ASSOC);
+         
+         echo json_encode($result);    
+        }
+        
+         public function getEventsByDate($id){
+             if($id=='1'){
+                $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
+            FROM event e, eventcategory c, organization o,user u
+            WHERE 
+            e.eventCategory = c.id AND 
+            e.organizations_id=o.id AND 
+            e.CreatedBy=u.id AND e.draft=1 AND e.enabled=1 AND e.start_date=NOW() AND
+            e.end_date>= NOW()";
+             }
+             
+             if($id=='2'){
+                $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
+            FROM event e, eventcategory c, organization o,user u
+            WHERE 
+            e.eventCategory = c.id AND 
+            e.organizations_id=o.id AND 
+            e.CreatedBy=u.id AND e.draft=1 AND e.enabled=1 AND DATEDIFF(e.start_date,NOW())<=7 AND DATEDIFF(e.start_date,NOW())>=0 AND
+            e.end_date>= NOW()";
+             }
+             
+             if($id=='3'){
+                 $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
+            FROM event e, eventcategory c, organization o,user u
+            WHERE 
+            e.eventCategory = c.id AND 
+            e.organizations_id=o.id AND 
+            e.CreatedBy=u.id AND e.draft=1 AND e.enabled=1 AND MONTH(e.start_date)=MONTH(now()) AND
+            e.end_date>= NOW()";
+             
+             }
+            
+            $query=$this->handler->prepare($sql);
+            
+         $query->execute();
+         $result=$query->fetchAll(PDO::FETCH_ASSOC);
+         
+         echo json_encode($result);    
+        }
+        
+        public function getEventsByOrg($org){
+         $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
+            FROM event e, eventcategory c, organization o,user u
+            WHERE 
+            e.eventCategory = c.id AND 
+            e.organizations_id=o.id AND 
+            e.CreatedBy=u.id AND e.draft=1 AND e.enabled=1 AND o.org_name=? AND
+            e.end_date>= NOW()";
+            
+            $query=$this->handler->prepare($sql);
+            
+         $query->execute(array($org));
+         $result=$query->fetchAll(PDO::FETCH_ASSOC);
+         
+         echo json_encode($result);    
         }
          public function getPastEvents(){
          $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time
