@@ -1,63 +1,63 @@
 <div class="ui grey small inverted menu" style="border-radius:0px;margin:0px;" ng-if="loggedUser.rol==4">
-  
-    
-  <a class="item" href="#/{{loggedUser.org}}/dashboard">
-    <i class="dashboard icon"></i> Dashboard
-  </a>
-  <div class="right menu">
-      <a class="item" href="#/editUserProfile">
-          <i class="user icon"></i> <b> {{loggedUser.last_name}} {{loggedUser.first_name}}</b>
-  </a>
-    <a class="item" ng-click="logout()">
-        <i class="sign out icon"></i> logout
+
+
+    <a class="item" href="#/{{loggedUser.org}}/dashboard">
+        <i class="dashboard icon"></i> Dashboard
     </a>
-  </div>
+    <div class="right menu">
+        <a class="item" href="#/editUserProfile">
+            <i class="user icon"></i> <b> {{loggedUser.last_name}} {{loggedUser.first_name}}</b>
+        </a>
+        <a class="item" ng-click="logout()">
+            <i class="sign out icon"></i> logout
+        </a>
+    </div>
 </div>
 <div class="ui grey small inverted menu" style="border-radius:0px;margin:0px;" ng-if="loggedUser.rol==1">
-  
+
     <div class="item" dropdown is-open="status.isopen">
-      <a id="single-button" type="button" dropdown-toggle ng-disabled="disabled">
+        <a id="single-button" type="button" dropdown-toggle ng-disabled="disabled">
         Admin <span class="caret"></span>
       </a>
-      <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
-        <li role="menuitem"><a href="#/dasboard">Dashboard</a></li>
-        <li role="menuitem"><a href="#/events">Evets</a></li>
-        <li role="menuitem"><a href="#/users">Utilizatori</a></li>
-        <li role="menuitem"><a href="#/organizations">Organizatii</a></li>
-        
-      </ul>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+            <li role="menuitem"><a href="#/dasboard">Dashboard</a></li>
+            <li role="menuitem"><a href="#/events">Evets</a></li>
+            <li role="menuitem"><a href="#/users">Utilizatori</a></li>
+            <li role="menuitem"><a href="#/organizations">Organizatii</a></li>
+
+        </ul>
     </div>
-    
-  <a class="item" href="#/dasboard">
+
+    <a class="item" href="#/dasboard">
     Dashboard
   </a>
-  <div class="right menu">
-      <a class="item" href="#/editUserProfile">
-          <i  class="user icon"></i> <b> {{loggedUser.last_name}} {{loggedUser.first_name}}</b>
-  </a>
-    <a class="item" ng-click="logout()">
-        <i class="sign out icon"></i> logout
-    </a>
-  </div>
+    <div class="right menu">
+        <a class="item" href="#/editUserProfile">
+            <i class="user icon"></i> <b> {{loggedUser.last_name}} {{loggedUser.first_name}}</b>
+        </a>
+        <a class="item" ng-click="logout()">
+            <i class="sign out icon"></i> logout
+        </a>
+    </div>
 </div>
 <div class="ui inverted menu" style="border-radius:0px;margin:0px;">
-     <a class="item" href="#/">
-        <img src="images/icon.png" />  
+    <a class="item" href="#/">
+        <img src="images/icon.png" />
     </a>
     <a class="item" href="#/" ng-class="page=='home'? 'active':''">
-    <i class="home icon"></i> Home
-  </a>
-      <a class="item" href="#/mobileZone" ng-class="page=='mobile'? 'active':''">
-    <i class="mobile icon"></i> Mobile zone
-      </a>
-  <a class="item" href="#/ongZone" ng-class="page=='ong'? 'active':''">
-    <i class="heart icon"></i> ONG zone
-      </a>
-  <div class="right menu" >
-      <a class="item" href="https://www.facebook.com/sniffevents?fref=ts" target="_blank"><i class="facebook icon"></i></a>
-    <a ng-if="!loggedUser.rol" class="item" href="#/login" ng-class="page=='login'? 'active':''">
-      <i class="sign in icon"></i> Login
+        <i class="home icon"></i> Home
     </a>
+    <a class="item" href="#/mobileZone" ng-class="page=='mobile'? 'active':''">
+        <i class="mobile icon"></i> Mobile zone
+    </a>
+    <a class="item" href="#/ongZone" ng-class="page=='ong'? 'active':''">
+        <i class="heart icon"></i> ONG zone
+    </a>
+    <div class="right menu">
+        <a class="item" href="https://www.facebook.com/sniffevents?fref=ts" target="_blank"><i class="facebook icon"></i></a>
+        <a ng-if="!loggedUser.rol" class="item" href="#/login" ng-class="page=='login'? 'active':''">
+            <i class="sign in icon"></i> Login
+        </a>
     </div>
-  
+
 </div>

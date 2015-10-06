@@ -14,7 +14,7 @@
                     <a class="ui basic green fluid button" ng-click="newEventButton()">Adauga</a>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
@@ -51,13 +51,13 @@
 
     </div>
     <div class="col-sm-6">
-        
+
     </div>
-      
+
     <div class="col-sm-6">
-        
+
     </div>
-   <!-- <div class="col-sm-3">
+    <!-- <div class="col-sm-3">
                   
         <table class="ui unstackable striped table">
           <thead>
@@ -97,59 +97,55 @@
         <div class="page-header" style="margin-top:0px;">
             <h2>TOP CATEGORII</h2>
         </div>
-    <canvas id="line" class="chart chart-line" data="data"
-  labels="labels" legend="true" series="series"
-  click="onClick">
-</canvas> 
+        <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" click="onClick">
+        </canvas>
         <table class="ui unstackable striped table">
-          <tbody>
-            <tr ng-repeat="cat in evs">
-              <td class="collapsing">
-                <i class="calendar icon"></i> {{cat.categoryName}}
-              </td>
-              <td style="text-align:right;">{{cat.nr_ev}} Evenimente</td>
-              
-            </tr>
-            
-            
-          </tbody>
+            <tbody>
+                <tr ng-repeat="cat in evs">
+                    <td class="collapsing">
+                        <i class="calendar icon"></i> {{cat.categoryName}}
+                    </td>
+                    <td style="text-align:right;">{{cat.nr_ev}} Evenimente</td>
+
+                </tr>
+
+
+            </tbody>
         </table>
     </div>
     <div class="col-sm-4">
-          <div class="page-header" style="margin-top:0px;">
+        <div class="page-header" style="margin-top:0px;">
             <h2>TOP ORGANIZATII</h2>
         </div>
-    <canvas id="line" class="chart chart-line" data="data2"
-  labels="labels2" legend="true" series="series"
-            click="onClick"></canvas>
+        <canvas id="line" class="chart chart-line" data="data2" labels="labels2" legend="true" series="series" click="onClick"></canvas>
         <table class="ui unstackable striped table">
-         <tbody>
-            <tr ng-repeat="org in orgs">
-              <td class="collapsing">
-                <i class="heart icon"></i> {{org.org_name}}
-              </td>
-              <td style="text-align:right">{{org.nr_evenimente}} evenimente</td>
-            </tr>
-          </tbody>
+            <tbody>
+                <tr ng-repeat="org in orgs">
+                    <td class="collapsing">
+                        <i class="heart icon"></i> {{org.org_name}}
+                    </td>
+                    <td style="text-align:right">{{org.nr_evenimente}} evenimente</td>
+                </tr>
+            </tbody>
         </table>
     </div>
-    
+
     <div class="col-sm-4">
-    <div class="page-header" style="margin-top:0px">
+        <div class="page-header" style="margin-top:0px">
             <h2>APROBA EVENIMENTE</h2>
         </div>
         <div class="ui middle aligned divided list">
-              <div class="item" ng-repeat="ev in ev_for_aprouve">
+            <div class="item" ng-repeat="ev in ev_for_aprouve">
                 <div class="right floated content">
-                  <div class="ui button">View</div>
-                  <div class="ui icon green button" ng-click="project_ok($index,ev.event_id)"><i class="check icon"></i></div>
-                  <div class="ui icon red button" ng-click="project_rejected($index,ev.event_id)"><i class="remove icon"></i></div>
+                    <div class="ui button">View</div>
+                    <div class="ui icon green button" ng-click="project_ok($index,ev.event_id)"><i class="check icon"></i></div>
+                    <div class="ui icon red button" ng-click="project_rejected($index,ev.event_id)"><i class="remove icon"></i></div>
                 </div>
                 <div class="content">
-                  {{ev.project_name}}
+                    {{ev.project_name}}
                 </div>
-              </div>
-              
             </div>
+
+        </div>
     </div>
 </div>

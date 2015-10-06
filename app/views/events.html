@@ -2,52 +2,52 @@
 <div events-sidebar></div>
 <div class="col-sm-10">
     <div class="ui left icon input pull-right" style="margin-top:15px;margin-bottom:15px;">
-  <input type="text" placeholder="Search events..." ng-model="search">
-  <i class="search icon"></i>
-</div>
+        <input type="text" placeholder="Search events..." ng-model="search">
+        <i class="search icon"></i>
+    </div>
     <table class="ui table">
-  <thead>
-    <tr>
-      <th>Nume</th>
-      <th>Organizator</th>
-        <th>Categorie</th>
-        <th>Sters?</th>
-        <th>Status</th>
-        <th>Adaugat de</th>
-        <th>Aprobat</th>
-        <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr dir-paginate="event in events | filter:search | itemsPerPage: 10">
-      <td>
-          <a class="ui empty circular label" style="background:{{event.color}};"></a> {{event.project_name}}</td>
-      <td>{{event.org_name}}</td>
-      <td>{{event.categoryName}}</td>
-      <td>
-          <a class="ui red label" ng-if="event.isDeleted==0">Nu</a> 
-          <a class="ui green label" ng-if="event.isDeleted==1">Da</a>
-      </td>
-        <td>
-         <a class="ui yellow label" ng-if="event.draft==0">Draft</a>
-          <a class="ui green label" ng-if="event.draft==1">Publicat</a>
-        </td>
-        <td><i class="user icon"></i> {{event.first_name}} {{event.last_name}}</td>
-        <td>
-            <i class="check icon" ng-if="event.enabled==1" tooltip="Aprobat"></i>
-            <i class="ellipsis horizontal icon" ng-if="event.enabled==0&&event.draft==1" tooltip="In asteptare"></i>
-            <i class="remove icon" ng-if="event.enabled==2" tooltip="Respins!"></i>
-        </td>
-      <td >
-          <a href="" class="ui mini red button pull-right" ng-click='deleteEvent(event.event_id,$index)'>Delete</a>
-        <a href="#/feedbacks/{{event.event_id}}" class="ui mini green button pull-right">Feedback</a>
-        
-          <a href="#/editEvent/{{event.event_id}}" class="ui mini button pull-right" >Edit</a>
-      </td>
-    </tr>
-    
-  </tbody>
-</table>
+        <thead>
+            <tr>
+                <th>Nume</th>
+                <th>Organizator</th>
+                <th>Categorie</th>
+                <th>Sters?</th>
+                <th>Status</th>
+                <th>Adaugat de</th>
+                <th>Aprobat</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr dir-paginate="event in events | filter:search | itemsPerPage: 10">
+                <td>
+                    <a class="ui empty circular label" style="background:{{event.color}};"></a> {{event.project_name}}</td>
+                <td>{{event.org_name}}</td>
+                <td>{{event.categoryName}}</td>
+                <td>
+                    <a class="ui red label" ng-if="event.isDeleted==0">Nu</a>
+                    <a class="ui green label" ng-if="event.isDeleted==1">Da</a>
+                </td>
+                <td>
+                    <a class="ui yellow label" ng-if="event.draft==0">Draft</a>
+                    <a class="ui green label" ng-if="event.draft==1">Publicat</a>
+                </td>
+                <td><i class="user icon"></i> {{event.first_name}} {{event.last_name}}</td>
+                <td>
+                    <i class="check icon" ng-if="event.enabled==1" tooltip="Aprobat"></i>
+                    <i class="ellipsis horizontal icon" ng-if="event.enabled==0&&event.draft==1" tooltip="In asteptare"></i>
+                    <i class="remove icon" ng-if="event.enabled==2" tooltip="Respins!"></i>
+                </td>
+                <td>
+                    <a href="" class="ui mini red button pull-right" ng-click='deleteEvent(event.event_id,$index)'>Delete</a>
+                    <a href="#/feedbacks/{{event.event_id}}" class="ui mini green button pull-right">Feedback</a>
+
+                    <a href="#/editEvent/{{event.event_id}}" class="ui mini button pull-right">Edit</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
     <div align="center">
         <dir-pagination-controls></dir-pagination-controls>
     </div>

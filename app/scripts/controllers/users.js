@@ -8,18 +8,18 @@
  * Controller of the sniffyApp
  */
 angular.module('sniffyApp')
-  .controller('UsersCtrl', function ($scope,userService) {
-       $scope.page='users';
+    .controller('UsersCtrl', function ($scope, userService) {
+        $scope.page = 'users';
         userService.getAllUsers()
-        .success(function(response){
-            console.log(response);
-            $scope.users=response;          
-        })
-        
+            .success(function (response) {
+                console.log(response);
+                $scope.users = response;
+            })
+
         userService.getRoles()
-        .success(function(response){
-            console.log(response);
-            $scope.roles=response;
-        })
-        
-  });
+            .success(function (response) {
+                console.log(response);
+                $scope.roles = response;
+            })
+
+    });

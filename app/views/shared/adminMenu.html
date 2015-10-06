@@ -1,29 +1,28 @@
 <div class="ui inverted menu" style="border-radius:0px;">
-     <a class="item" href="#/">
-        <img src="images/icon.png" />  
+    <a class="item" href="#/">
+        <img src="images/icon.png" />
     </a>
-  <a class="item" href="#/dasboard" ng-class="page=='dashboard'?'active':''">
-    <i class="dashboard icon"></i> Dashboard
-  </a>
+    <a class="item" href="#/dasboard" ng-class="page=='dashboard'?'active':''">
+        <i class="dashboard icon"></i> Dashboard
+    </a>
     <a class="item" href="#/events" ng-class="page=='events'?'active':''">
-    <i class="calendar icon"></i> Evenimente
-  </a>
-  <a class="item" href="#/users" ng-class="page=='users'?'active':''">
-    <i class="users icon"></i> Utilizatori
-  </a>
-  <a class="item" href="#/organizations" ng-class="page=='organizations'?'active':''">
-    <i class="heart icon"></i> Organizatii
-  </a>
-    
+        <i class="calendar icon"></i> Evenimente
+    </a>
+    <a class="item" href="#/users" ng-class="page=='users'?'active':''">
+        <i class="users icon"></i> Utilizatori
+    </a>
+    <a class="item" href="#/organizations" ng-class="page=='organizations'?'active':''">
+        <i class="heart icon"></i> Organizatii
+    </a>
     <div class="menu right">
-    </a>
-    <a class="item" href="#/editUserProfile">
-    <i class="user icon"></i> {{loggedUser.last_name}} {{loggedUser.first_name}}
-  </a>
-    </a>
-    <a class="item" href="" ng-click="logout()">
-    <i class="sign out icon"></i> Log out
-  </a>
+        <a>
+            <a class="item" href="#/editUserProfile">
+                <i class="user icon"></i> {{loggedUser.last_name}} {{loggedUser.first_name}}
+            </a>
+        </a>
+        <a class="item" href="" ng-click="logout()">
+            <i class="sign out icon"></i> Log out
+        </a>
     </div>
-  
+
 </div>

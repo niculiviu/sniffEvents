@@ -8,10 +8,10 @@
  * Controller of the sniffyApp
  */
 angular.module('sniffyApp')
-  .controller('OrgCtrl', function ($scope) {
-    $scope.awesomeThings = [
+    .controller('OrgCtrl', function ($scope) {
+        $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+    });

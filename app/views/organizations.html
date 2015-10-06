@@ -6,12 +6,12 @@
             <div class="ui blue segment" style="margin-top:15px;margin-bottom:15px;">
                 <div class="row">
                     <div class="col-sm-5 ui fluid input">
-                        
+
                         <input class="ui input" placeholder="Nume Organizatie" ng-model="org.name">
                     </div>
                     <div class="col-sm-5 ui fluid input">
                         <select class="ui selection dropdown fluid" ng-options="types.type for types in orgTypes" ng-model="org.type">
-                         <option value="">-- Adauga Tip --</option>
+                            <option value="">-- Adauga Tip --</option>
                         </select>
                     </div>
                     <div class="col-sm-2">
@@ -20,32 +20,32 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
-    
+
     <table class="ui table">
-  <thead>
-    <tr>
-      <th>Nume Organizatie</th>
-      <th>Tip</th>
-      <th>Adaugat de</th>
-        
-        <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr dir-paginate="org in orgs | itemsPerPage: 10">
-      <td>{{org.org_name}}</td>
-      <td>{{org.type}}</td>
-      <td>{{org.first_name}} {{org.last_name}}</td>
-      <td>
-        <a href="#/{{org.id}}/dashboard/" class="ui mini button">Edit</a>
-        <a href="" class="ui mini red button">Delete</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <thead>
+            <tr>
+                <th>Nume Organizatie</th>
+                <th>Tip</th>
+                <th>Adaugat de</th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr dir-paginate="org in orgs | itemsPerPage: 10">
+                <td>{{org.org_name}}</td>
+                <td>{{org.type}}</td>
+                <td>{{org.first_name}} {{org.last_name}}</td>
+                <td>
+                    <a href="#/{{org.id}}/dashboard/" class="ui mini button">Edit</a>
+                    <a href="" class="ui mini red button">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <div align="center">
-                <dir-pagination-controls></dir-pagination-controls>
-            </div>
+        <dir-pagination-controls></dir-pagination-controls>
+    </div>
 </div>

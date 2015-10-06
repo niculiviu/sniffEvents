@@ -1,19 +1,18 @@
- <div class="col-sm-2" style="padding-left:0px;">
-        <div class="ui vertical pointing menu" style="width:100%;">
-  <a class="active item" href="#/users">
-    <i class="users icon"></i> Toti utilizatorii
-  </a>
-  <a class="item" href="#/newUser">
-    <i class="plus icon"></i> Adauga utilizator
-  </a>
-</div>
-     
-     <b style="padding-left:10px;padding-right:10px;">Roluri
-       
-     </b>
-<div class="ui vertical pointing menu" style="width:100%;">
-  <a class="item" ng-repeat="role in roles">
-    <i class="tag icon"></i> {{role.role_name}}
-  </a>
-</div>
+<div class="col-sm-2" style="padding-left:0px;">
+    <div class="ui vertical pointing menu" style="width:100%;">
+        <a class="active item" href="#/users">
+            <i class="users icon"></i> Toti utilizatorii
+        </a>
+        <a class="item" href="#/newUser">
+            <i class="plus icon"></i> Adauga utilizator
+        </a>
+    </div>
+
+    <b style="padding-left:10px;padding-right:10px;">Roluri</b>
+
+    <div class="ui vertical pointing menu" style="width:100%;">
+        <a class="item" ng-repeat="role in roles">
+            <i class="tag icon"></i> {{role.role_name}}
+        </a>
+    </div>
 </div>

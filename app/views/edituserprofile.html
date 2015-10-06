@@ -1,14 +1,14 @@
 <div org-menu ng-show="loggedUser.rol=='4'"></div>
 <div admin-header ng-if="loggedUser.rol=='1'"></div>
 <div class="ui container">
-<div class="page-header">
-    <h2>INOIESTE INFORMATIILE</h2>
-    
-</div>
+    <div class="page-header">
+        <h2>INOIESTE INFORMATIILE</h2>
+
+    </div>
     <div class="ui red message" ng-show="obligatorii">Toate campurile sunt obligatorii</div>
     <div class="ui red message" ng-show="email_error">Emailul nu este corect formatat</div>
     <div class="ui green message" ng-show="success">Succes!</div>
-<form class="ui form">
+    <form class="ui form">
         <div class="field">
             <label>Email</label>
             <input placeholder="Nume" ng-model="loggedUser.email" ng-blur="verify(loggedUser.email)">
@@ -22,15 +22,15 @@
             <label>Prenume</label>
             <input placeholder="Nume" ng-model="loggedUser.last_name">
         </div>
-        
+
 
     </form>
     <div class="pull-right" style="margin-top:15px;">
         <button class="ui green button" ng-disabled="loading" ng-click="updateUser()">Salveazã</button>
     </div>
-<div class="page-header">
-    <h2>SCHIMBA PAROLA</h2>
-</div>
+    <div class="page-header">
+        <h2>SCHIMBA PAROLA</h2>
+    </div>
     <div class="ui green message" ng-show="parola_schimbata">Parola a fost schimbata.</div>
     <div class="ui red message" ng-show="parola_veche">Parola veche nu se potriveste cu cea din baza de date.</div>
     <div class="ui red message" ng-show="parola_obligatorii">Toate campurile sunt obligatorii</div>
@@ -49,7 +49,7 @@
             <input type=password placeholder="Parola noua inca odata" ng-model="newPass.pass2">
         </div>
     </form>
-     <div class="pull-right" style="margin-top:15px;">
+    <div class="pull-right" style="margin-top:15px;">
         <button class="ui green button" ng-click="schimbaParola()">Salveazã</button>
     </div>
-    </div>
+</div>

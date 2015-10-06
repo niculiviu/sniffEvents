@@ -7,9 +7,9 @@
  * # eventsSidebar
  */
 angular.module('sniffyApp')
-  .directive('eventsSidebar', function () {
-     return {
-      templateUrl: 'views/shared/eventSidebar.html'
-      
-    };
-  });
+    .directive('eventsSidebar', function () {
+        return {
+            templateUrl: 'views/shared/eventSidebar.html'
+
+        };
+    });

@@ -7,18 +7,18 @@
  * # semanticDropdown
  */
 angular.module('sniffyApp')
-  .directive('semanticDropdown', function () {
-    return {
-      
-      link: function(scope, element, attrs) {
-          element.bind('click',function(){
-              console.log('click');
-            element.dropdown({
-            // you can use any ui transition
-            transition: 'drop'
-          });
-          })
-      
-      }
-    };
-  });
+    .directive('semanticDropdown', function () {
+        return {
+
+            link: function (scope, element, attrs) {
+                element.bind('click', function () {
+                    console.log('click');
+                    element.dropdown({
+                        // you can use any ui transition
+                        transition: 'drop'
+                    });
+                })
+
+            }
+        };
+    });

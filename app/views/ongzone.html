@@ -1,81 +1,81 @@
 <div main-menu></div>
-<div class="ui green segment"  style="border-radius:0px;margin:0px;box-shadow:0px;">
+<div class="ui green segment" style="border-radius:0px;margin:0px;box-shadow:0px;">
     <div class="container">
         <h2>ONG ZONE</h2>
     </div>
 </div>
-<img src="images/sniffong.png" class="img-responsive"/>
+<img src="images/sniffong.png" class="img-responsive" />
 <div style="width:100%; padding:40px; background:#21ba45;color:white" align="center">
     <div class="container">
         <h2>Pentru a folosi aplicatia <b>SNIFF EVENTS</b> este nevoie sa completezi formularul de mai jos</h2>
-    
-    <h1><i class="angle down icon"></i></h1>
-  
+
+        <h1><i class="angle down icon"></i></h1>
+
     </div>
-    
+
 </div>
 
 <div class="container">
-        <div class="row">
-            <div class="col-md-6">
+    <div class="row">
+        <div class="col-md-6">
             <div class="page-header">
-                    <h2>Avantaje</h2>
-                </div>
-                <p style="text-align:justify;">Nu ne propunem ca acest proiect sa inlocuiasca in totalitate modul in care se face promovarea unui eveniment in momentul actual. Ne propunem doar sa devenim o alternativa moderna care face legatura dintre organizatorii unui eveniment si publicul tinta, intr-un mod mai putin agresiv. De aceea consideram ca avantajele folosirii aplicatiei noastre sunt: </p>
-                <h1 style="color:#21ba45;">1 <small>Comunicarea eficienta cu publicul tinta</small></h1>
-                <h1 style="color:#21ba45;">2 <small>Expunere de marketing in fata unui public interesat</small></h1>
-                <h1 style="color:#21ba45;">3 <small>Promovare eficienta si mai putin agresiva</small></h1>
-                <h1 style="color:#21ba45;">4 <small>Inbunatatirea proiectelor ca urmare a feedback-ului primit</small></h1>
-               
-                <p style="text-align:justify;margin-bottom:20px;"><b>Sniff Events</b> este o aplicatie care poate fi folosita gratuit atat de organizatii cat si de catre utilizatorii de mobile. Nu are scop financiar, de aceea organizatorii nu au nici un avantaj financiar din acest proiect. Toti suntem voluntari si toti credem in acelasi lucru, ca odata cu implicarea in proiecte precum acesta poate aduce un plus tuturor, fara sa avem nici un altfel de interes. </p>
+                <h2>Avantaje</h2>
             </div>
-            <div class="col-md-6">
-                <div class="page-header">
-                    <h2>Inregistrare ONG</h2>
-                </div>
-                <div class="ui green message">
-                    Cu ajutorul acestui formular iti inregistrezi organizatia in aplicatie pentru a putea adauga evenimente. Odata cu indeplinirea acestui pas poti folosi userul si pentru a te loga in aplicatia mobile.
-                </div>
-                <div class="ui red message" ng-show="obligatoriu">
-                    Toate campurile sunt obligatorii
-                </div>
-                <div class="ui red message" ng-show="email">
-                    E-mail-ul nu este corect formatat
-                </div>
-                <div class="ui red message" ng-show="parola">
-                    Parolele nu se potrivesc
-                </div> 
-                <div class="ui red message" ng-show="errorEmail">
-                    Email-ul exista in baza de date
-                </div> 
-                <div class="ui green message" ng-show="success">
-                    Organizatia a fost adaugata, te poti duce pe pagina de <a href="#/login">login</a> pentru a intra in cont!
-                </div>
-                <form class="ui form">
-                  <div class="field">
+            <p style="text-align:justify;">Nu ne propunem ca acest proiect sa inlocuiasca in totalitate modul in care se face promovarea unui eveniment in momentul actual. Ne propunem doar sa devenim o alternativa moderna care face legatura dintre organizatorii unui eveniment si publicul tinta, intr-un mod mai putin agresiv. De aceea consideram ca avantajele folosirii aplicatiei noastre sunt: </p>
+            <h1 style="color:#21ba45;">1 <small>Comunicarea eficienta cu publicul tinta</small></h1>
+            <h1 style="color:#21ba45;">2 <small>Expunere de marketing in fata unui public interesat</small></h1>
+            <h1 style="color:#21ba45;">3 <small>Promovare eficienta si mai putin agresiva</small></h1>
+            <h1 style="color:#21ba45;">4 <small>Inbunatatirea proiectelor ca urmare a feedback-ului primit</small></h1>
+
+            <p style="text-align:justify;margin-bottom:20px;"><b>Sniff Events</b> este o aplicatie care poate fi folosita gratuit atat de organizatii cat si de catre utilizatorii de mobile. Nu are scop financiar, de aceea organizatorii nu au nici un avantaj financiar din acest proiect. Toti suntem voluntari si toti credem in acelasi lucru, ca odata cu implicarea in proiecte precum acesta poate aduce un plus tuturor, fara sa avem nici un altfel de interes. </p>
+        </div>
+        <div class="col-md-6">
+            <div class="page-header">
+                <h2>Inregistrare ONG</h2>
+            </div>
+            <div class="ui green message">
+                Cu ajutorul acestui formular iti inregistrezi organizatia in aplicatie pentru a putea adauga evenimente. Odata cu indeplinirea acestui pas poti folosi userul si pentru a te loga in aplicatia mobile.
+            </div>
+            <div class="ui red message" ng-show="obligatoriu">
+                Toate campurile sunt obligatorii
+            </div>
+            <div class="ui red message" ng-show="email">
+                E-mail-ul nu este corect formatat
+            </div>
+            <div class="ui red message" ng-show="parola">
+                Parolele nu se potrivesc
+            </div>
+            <div class="ui red message" ng-show="errorEmail">
+                Email-ul exista in baza de date
+            </div>
+            <div class="ui green message" ng-show="success">
+                Organizatia a fost adaugata, te poti duce pe pagina de <a href="#/login">login</a> pentru a intra in cont!
+            </div>
+            <form class="ui form">
+                <div class="field">
                     <input type="text" name="Nume" placeholder="Nume" class="green-input" ng-model="newUser.nume">
-                  </div>
-                  <div class="field">
-                    <input type="text" name="Prenume" placeholder="Prenume" class="green-input"  ng-model="newUser.prenume">
-                  </div>
-                    <div class="field">
-                    <input type="text" name="E-mail" placeholder="E-mail" class="green-input"  ng-model="newUser.email">
-                  </div>
-                  <div class="field">
-                    <input type="text" name="Parola" placeholder="Parola" class="green-input"  ng-model="newUser.pass1">
-                  </div>
-                     <div class="field">
-                    <input type="text" name="Parola inca odata" placeholder="Parola inca odata" class="green-input"  ng-model="newUser.pass2">
-                  </div>
-                     <div class="field">
-                    <input type="text" name="Nume Organizatie" placeholder="Nume Organizatie" class="green-input"  ng-model="newUser.org" ng-blur="checkOrg(newUser.org)">
-                         <small ng-show="org_exista"><i class="remove icon"></i> Numele mai exista in baza de date</small>
-                  </div>
-                  
-                  <button class="ui basic green button" type="submit" style="margin-bottom:20px;" ng-click="newOrgUser(newUser)" ng-disabled="org_exista || loading">Inregistrare</button>
-                </form>
-            </div>
+                </div>
+                <div class="field">
+                    <input type="text" name="Prenume" placeholder="Prenume" class="green-input" ng-model="newUser.prenume">
+                </div>
+                <div class="field">
+                    <input type="text" name="E-mail" placeholder="E-mail" class="green-input" ng-model="newUser.email">
+                </div>
+                <div class="field">
+                    <input type="text" name="Parola" placeholder="Parola" class="green-input" ng-model="newUser.pass1">
+                </div>
+                <div class="field">
+                    <input type="text" name="Parola inca odata" placeholder="Parola inca odata" class="green-input" ng-model="newUser.pass2">
+                </div>
+                <div class="field">
+                    <input type="text" name="Nume Organizatie" placeholder="Nume Organizatie" class="green-input" ng-model="newUser.org" ng-blur="checkOrg(newUser.org)">
+                    <small ng-show="org_exista"><i class="remove icon"></i> Numele mai exista in baza de date</small>
+                </div>
+
+                <button class="ui basic green button" type="submit" style="margin-bottom:20px;" ng-click="newOrgUser(newUser)" ng-disabled="org_exista || loading">Inregistrare</button>
+            </form>
         </div>
     </div>
+</div>
 
 <div footer></div>

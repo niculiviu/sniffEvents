@@ -6,46 +6,46 @@
             <div class="page-header" style="margin-top:0px;">
                 <h2><i class="calendar icon"></i>EVENIMENTE <a class="ui basic green button pull-right" ng-click="newEventButton()"><i class="plus icon"></i>Adauga</a></h2>
             </div>
-           
+
             <table class="ui table">
-              <thead>
-                <tr>
-                  <th>Nume</th>
-                  
-                    <th>Categorie</th>
-                    
-                    <th>Status</th>
-                    <th>Adaugat de</th>
-                    <th>Aprobat</th>
-                    <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr dir-paginate="event in events | filter:search | itemsPerPage: 5">
-                  <td>
-                      <a class="ui empty circular label" style="background:{{event.color}};"></a> {{event.project_name}}</td>
-                 
-                  <td>{{event.categoryName}}</td>
-                  
-                    <td>
-                     <a class="ui yellow label" ng-if="event.draft==0">Draft</a>
-                      <a class="ui green label" ng-if="event.draft==1">Publicat</a>
-                    </td>
-                    <td><i class="user icon"></i> {{event.first_name}} {{event.last_name}}</td>
-                    <td>
-                        <i class="check icon" ng-if="event.enabled==1" tooltip="Aprobat"></i>
-                        <i class="ellipsis horizontal icon" ng-if="event.enabled==0&&event.draft==1" tooltip="In asteptare"></i>
-                        <i class="remove icon" ng-if="event.enabled==2" tooltip="Respins!"></i>
-                    </td>
-                  <td >
-                    <a href="" class="ui mini red basic button pull-right" ng-click='deleteEvent(event.event_id,$index)'>Delete</a>
-                    <a href="#/feedbacks/{{event.event_id}}" class="ui mini basic green button pull-right">Feedback</a>
+                <thead>
+                    <tr>
+                        <th>Nume</th>
 
-                      <a href="#/{{loggedUser.org}}/editEvent/{{event.event_id}}" class="ui mini basic button pull-right" >Edit</a>
-                  </td>
-                </tr>
+                        <th>Categorie</th>
 
-              </tbody>
+                        <th>Status</th>
+                        <th>Adaugat de</th>
+                        <th>Aprobat</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr dir-paginate="event in events | filter:search | itemsPerPage: 5">
+                        <td>
+                            <a class="ui empty circular label" style="background:{{event.color}};"></a> {{event.project_name}}</td>
+
+                        <td>{{event.categoryName}}</td>
+
+                        <td>
+                            <a class="ui yellow label" ng-if="event.draft==0">Draft</a>
+                            <a class="ui green label" ng-if="event.draft==1">Publicat</a>
+                        </td>
+                        <td><i class="user icon"></i> {{event.first_name}} {{event.last_name}}</td>
+                        <td>
+                            <i class="check icon" ng-if="event.enabled==1" tooltip="Aprobat"></i>
+                            <i class="ellipsis horizontal icon" ng-if="event.enabled==0&&event.draft==1" tooltip="In asteptare"></i>
+                            <i class="remove icon" ng-if="event.enabled==2" tooltip="Respins!"></i>
+                        </td>
+                        <td>
+                            <a href="" class="ui mini red basic button pull-right" ng-click='deleteEvent(event.event_id,$index)'>Delete</a>
+                            <a href="#/feedbacks/{{event.event_id}}" class="ui mini basic green button pull-right">Feedback</a>
+
+                            <a href="#/{{loggedUser.org}}/editEvent/{{event.event_id}}" class="ui mini basic button pull-right">Edit</a>
+                        </td>
+                    </tr>
+
+                </tbody>
             </table>
             <div align="center">
                 <dir-pagination-controls></dir-pagination-controls>
@@ -60,15 +60,15 @@
             </div>
             <table class="ui table">
                 <thead>
-                <tr>
-                    <th>Nume</th>
-                    <th></th>
-                </tr>
-                    </thead>
+                    <tr>
+                        <th>Nume</th>
+                        <th></th>
+                    </tr>
+                </thead>
                 <tr ng-repeat='user in users'>
                     <td>{{user.first_name}} {{user.last_name}}</td>
                     <td>
-                       
+
                         <a class="ui mini red basic icon button pull-right" tooltip='Elimina din Organizatie' ng-click="eliminaRol(user.id,$index)"><i class="remove icon"></i></a>
                     </td>
                 </tr>

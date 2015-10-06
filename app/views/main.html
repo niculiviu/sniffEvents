@@ -1,70 +1,96 @@
 <div main-menu></div>
 <div class="ui inverted segment" align='center' style="border-radius:0px;margin:0px;">
-  <br>
-    
-    <img src="images/sniff.png" width="200"/>
-    
+    <br>
+
+    <img src="images/sniff.png" width="200" />
+
     <h1 style="font-size:40px;margin:0px;">Sniff Events</h1>
-<h2>ACUM POTI DA FEEDBACK DE PE MOBIL!</h2>
-  
+    <h2>ACUM POTI DA FEEDBACK DE PE MOBIL!</h2>
+
     <p>
-        <a href="" class="ui large green button" ><i class="android icon"></i> Play Store</a>
-        <a href="" class="ui large inverted grey button" ><i class="apple icon"></i> Apple Store</a>
+        <a href="" class="ui large green button"><i class="android icon"></i> Play Store</a>
+        <a href="" class="ui large inverted grey button"><i class="apple icon"></i> Apple Store</a>
         <!--<a href="#/register" class="btn btn-primary">Register</a>-->
     </p>
-    
+
     <br>
     <br>
 </div>
 <div class="ui green segment" align='center' style="border-radius:0px;margin:0px;box-shadow:0px;">
     <h2>Inregistreaza-te pentru a beneficia de toate avantajele aplicatiei </h2>
     <div class="ui buttons">
-  <a href="#/register" class="ui button">Inregistrare</a>
-  <div class="or"></div>
-  <a href="#/login" class="ui positive button">Login</a>
-</div>
+        <a href="#/register" class="ui button">Inregistrare</a>
+        <div class="or"></div>
+        <a href="#/login" class="ui positive button">Login</a>
+    </div>
 </div>
 
 <div class="container">
+
     <div class="page-header">
         <h2>EVENIMENTE</h2>
     </div>
     <div class="ui three item menu">
-  <a class="active item" ng-click="search_item('')" ng-class="search==''?'active':''">Toate</a>
-  <a class="item" ng-repeat="cat in evCategories" ng-click="search_item(cat.categoryName)" ng-class="search==cat.categoryName?'active':''">{{cat.categoryName}}</a>
-</div>
+        <a class="active item" ng-click="search_item('')" ng-class="search==''?'active':''">Toate</a>
+        <a class="item" ng-repeat="cat in evCategories" ng-click="search_item(cat.categoryName)" ng-class="search==cat.categoryName?'active':''">{{cat.categoryName}}</a>
+    </div>
     <div class="row">
         <div class="col-md-4 col-sm-6" ng-repeat="event in events | filter: search">
-             <div class="ui segment" style="border-top: 2px solid {{event.color}};margin-bottom:10px;">
-               <a href="#/event/{{event.event_id}}"> <h2>{{event.project_name}}</h2></a>
-                 <small>Organizat de: {{event.org_name}}</small><br>
+            <div class="ui segment" style="border-top: 2px solid {{event.color}};margin-bottom:10px;">
+                <a href="#/event/{{event.event_id}}">
+                    <h2>{{event.project_name}}</h2></a>
+                <small>Organizat de: {{event.org_name}}</small>
+                <br>
                 <b>{{event.location_name}}</b>
-                 <p>{{event.address}}</p>
-                 <hr>
-                 {{event.start_date|date:'dd/MM/yyyy'}} - {{event.end_date|date:'dd/MM/yyyy'}}
-                 <div class="pull-right">
-                    <a class="ui facebook mini icon button" href={{event.FbPage}} target="_blank" ng-if="event.FbPage"><i class="facebook icon"></i></a><div class="ui label">{{event.categoryName}}</div>
-                 </div>
-             </div>
+                <p class="adresa">{{event.address}}</p>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="date">
+                            {{event.start_date|date:'dd/MM/yyyy'}} - {{event.end_date|date:'dd/MM/yyyy'}}
+                        </div>
+                    </div>
+                    <div class="col-xs-6" style="padding-right: 10px">
+                        <div class="pull-right">
+                            <a class="ui facebook mini icon button" href={{event.FbPage}} target="_blank" ng-if="event.FbPage"><i class="facebook icon"></i></a>
+                            <div class="ui label">{{event.categoryName}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
     <div class="page-header">
         <h2>ARHIVA</h2>
     </div>
     <div class="row">
         <div class="col-md-4 col-sm-6" ng-repeat="event in past">
             <div class="ui segment" style="border-top: 2px solid {{event.color}};margin-bottom:10px;">
-                <a href="#/event/{{event.event_id}}"> <h2>{{event.project_name}}</h2></a>
-                <small>Organizat de: {{event.org_name}}</small><br>
+                <a href="#/event/{{event.event_id}}">
+                    <h2>{{event.project_name}}</h2></a>
+                <small>Organizat de: {{event.org_name}}</small>
+                <br>
                 <b>{{event.location_name}}</b>
-                <p>{{event.address}}</p>
+                <p class="adresa">{{event.address}}</p>
                 <hr>
-                {{event.start_date|date:'dd/MM/yyyy'}} - {{event.end_date|date:'dd/MM/yyyy'}}
-                <div class="pull-right">
-                    <a class="ui facebook mini icon button" href={{event.FbPage}} target="_blank" ng-if="event.FbPage"><i class="facebook icon"></i></a><div class="ui label">{{event.categoryName}}</div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="date">
+                            {{event.start_date|date:'dd/MM/yyyy'}} - {{event.end_date|date:'dd/MM/yyyy'}}
+                        </div>
+                    </div>
+                    <div class="col-xs-6" style="padding-right: 10px">
+                        <div class="pull-right">
+                            <a class="ui facebook mini icon button" href={{event.FbPage}} target="_blank" ng-if="event.FbPage"><i class="facebook icon"></i></a>
+                            <div class="ui label">{{event.categoryName}}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 <div footer></div>

@@ -6,13 +6,19 @@
  * @description
  * # focusinput
  */
-angular.module('sniffEventsApp')
-  .directive('focusinput', function () {
-    return {
-      template: '<div></div>',
-      restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the focusinput directive');
-      }
-    };
-  });
+angular.module('sniffyApp')
+    .directive('focusMe', function () {
+        return {
+            restrict: 'A',
+            scope: {
+                focusMe: '='
+            },
+            link: function (scope, elt) {
+                scope.$watch('focusMe', function (val) {
+                    if (val) {
+                        elt[0].focus();
+                    }
+                });
+            }
+        };
+    });

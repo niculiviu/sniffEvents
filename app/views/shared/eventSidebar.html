@@ -1,23 +1,23 @@
- <div class="col-sm-2" style="padding-left:0px;">
-        <div class="ui vertical pointing menu" style="width:100%;">
-  <a class="active item" href="#/events" ng-class="page=='events'?'active':''">
-    <i class="users icon"></i> Toti evenimentele
-  </a>
-  <a class="item" ng-click="newEventButton()">
-    <i class="plus icon"></i> Adauga eveniment
-  </a>
-</div>
-     
-     <b style="padding-left:10px;padding-right:10px;" ng-if="page=='events'">Categorii Evenimente
+<div class="col-sm-2" style="padding-left:0px;">
+    <div class="ui vertical pointing menu" style="width:100%;">
+        <a class="active item" href="#/events" ng-class="page=='events'?'active':''">
+            <i class="users icon"></i> Toti evenimentele
+        </a>
+        <a class="item" ng-click="newEventButton()">
+            <i class="plus icon"></i> Adauga eveniment
+        </a>
+    </div>
+
+    <b style="padding-left:10px;padding-right:10px;" ng-if="page=='events'">Categorii Evenimente
         
      </b>
-<div class="ui vertical pointing menu" style="width:100%;" ng-if="page=='events'">
-    <a class="item" ng-click="search_item('')" ng-class="search==''?'active':''">
-        <i class="tag icon"></i> Toate
-    </a>
-    <a class="item" ng-repeat="cat in categories" ng-click="search_item(cat.categoryName)" ng-class="search==cat.categoryName?'active':''">
-        <i class="tag icon"></i> {{cat.categoryName}}
-    </a>
-  
-</div>
+    <div class="ui vertical pointing menu" style="width:100%;" ng-if="page=='events'">
+        <a class="item" ng-click="search_item('')" ng-class="search==''?'active':''">
+            <i class="tag icon"></i> Toate
+        </a>
+        <a class="item" ng-repeat="cat in categories" ng-click="search_item(cat.categoryName)" ng-class="search==cat.categoryName?'active':''">
+            <i class="tag icon"></i> {{cat.categoryName}}
+        </a>
+
+    </div>
 </div>

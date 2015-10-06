@@ -1,17 +1,39 @@
-h2{
-  font-family: 'Dosis', sans-serif !important;
+h2 {
+    font-family: 'Dosis', sans-serif !important;
     font-weight: 300 !important;
-
 }
 
-.angular-google-map-container { height: 400px; }
+.angular-google-map-container {
+    height: 400px;
+}
 
-.footer{
-width:100%;background:#49d369;padding:15px;
+.footer {
+    width: 100%;
+    background: #49d369;
+    padding: 15px;
 }
-.footer a{
-    color:white !important;
+
+.footer a {
+    color: white !important;
 }
-.green-input{
-border: solid 1px #21ba45 !important;
+
+.green-input {
+    border: solid 1px #21ba45 !important;
 }
+
+.date {
+    font-size: 12px;
+}
+
+.adresa {
+    height: 40px;
+}
+
+@media (max-width: 1200px) {
+    .date {
+        font-size: 9px;
+    }
+}
+
+
+/*@media (max-width: 993px) { }*/

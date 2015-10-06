@@ -7,9 +7,9 @@
  * # organizationsSidebar
  */
 angular.module('sniffyApp')
-  .directive('organizationsSidebar', function () {
-    return {
-      templateUrl: 'views/shared/organizationSidebar.html'
-      
-    };
-  });
+    .directive('organizationsSidebar', function () {
+        return {
+            templateUrl: 'views/shared/organizationSidebar.html'
+
+        };
+    });
