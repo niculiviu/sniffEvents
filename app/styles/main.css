@@ -29,6 +29,21 @@ h2 {
     height: 40px;
 }
 
+img.bg {
+    
+    min-width: 640px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.home > div >.menu{
+    background: transparent !important;
+}
+
 @media (max-width: 1200px) {
     .date {
         font-size: 9px;
