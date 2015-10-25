@@ -4,8 +4,8 @@
         
          public function __construct(){
             try{
-                $this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');
-                /*$this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');*/
+                /*$this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');*/
+                $this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');
                 $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             }
             catch(PDOException $e){

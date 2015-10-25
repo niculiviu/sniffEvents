@@ -14,4 +14,6 @@ angular.module('sniffyApp')
       'AngularJS',
       'Karma'
     ];
+    
+    $scope.page='about';
     });
