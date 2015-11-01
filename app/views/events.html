@@ -15,6 +15,7 @@
                 <th>Status</th>
                 <th>Adaugat de</th>
                 <th>Aprobat</th>
+                <th>Feedback</th>
                 <th></th>
             </tr>
         </thead>
@@ -38,10 +39,20 @@
                     <i class="ellipsis horizontal icon" ng-if="event.enabled==0&&event.draft==1" tooltip="In asteptare"></i>
                     <i class="remove icon" ng-if="event.enabled==2" tooltip="Respins!"></i>
                 </td>
+                    <td>
+                      <a href="#/feedbacks/{{event.event_id}}" class="ui mini green button">
+                        <i class="list icon"></i> Feedback
+                      </a>
+                      <a class="ui basic left pointing label">
+                        {{event.feedbackNr}}
+                      </a>
+                </td>
                 <td>
                     <a href="" class="ui mini red button pull-right" ng-click='deleteEvent(event.event_id,$index)'>Delete</a>
-                    <a href="#/feedbacks/{{event.event_id}}" class="ui mini green button pull-right">Feedback</a>
-
+                    
+                    
+                      
+                    
                     <a href="#/editEvent/{{event.event_id}}" class="ui mini button pull-right">Edit</a>
                 </td>
             </tr>

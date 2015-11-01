@@ -4,8 +4,8 @@
        
         public function __construct(){
             try{
-                /* $this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');*/
-            $this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');
+                 $this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');
+            /*$this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');*/
                 $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             }
             catch(PDOException $e){
@@ -50,7 +50,8 @@
         }
         
         public function getOrgEvents($id){
-            $sql="SELECT e.event_id,e.enabled,e.project_name,e.businessOk,e.draft,o.org_name,u.first_name,u.last_name, c.categoryName,e.color
+            $sql="SELECT e.event_id,e.enabled,e.project_name,e.businessOk,e.draft,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,
+            (SELECT count(*) FROM feedback f WHERE f.event_id=e.event_id) as 'feedbackNr'
             FROM event e, eventcategory c, organization o,user u
             WHERE 
             e.eventCategory = c.id AND 
@@ -218,7 +219,8 @@
         }
         
         public function getAllEvents(){
-            $sql="SELECT e.event_id,e.enabled,e.project_name,e.businessOk,e.draft,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.isDeleted
+            $sql="SELECT e.event_id,e.enabled,e.project_name,e.businessOk,e.draft,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.isDeleted,
+	(SELECT count(*) FROM feedback f WHERE f.event_id=e.event_id) as 'feedbackNr'
             FROM event e, eventcategory c, organization o,user u
             WHERE 
             e.eventCategory = c.id AND 

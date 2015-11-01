@@ -17,6 +17,7 @@
                         <th>Status</th>
                         <th>Adaugat de</th>
                         <th>Aprobat</th>
+                        <th>Feedback</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -38,8 +39,16 @@
                             <i class="remove icon" ng-if="event.enabled==2" tooltip="Respins!"></i>
                         </td>
                         <td>
+                      <a href="#/feedbacks/{{event.event_id}}" class="ui mini green button">
+                        <i class="list icon"></i> Feedback
+                      </a>
+                      <a class="ui basic left pointing label">
+                        {{event.feedbackNr}}
+                      </a>
+                </td>
+                        <td>
                             <a href="" class="ui mini red basic button pull-right" ng-click='deleteEvent(event.event_id,$index)'>Delete</a>
-                            <a href="#/feedbacks/{{event.event_id}}" class="ui mini basic green button pull-right">Feedback</a>
+                           <!-- <a href="#/feedbacks/{{event.event_id}}" class="ui mini basic green button pull-right">Feedback</a>-->
 
                             <a href="#/{{loggedUser.org}}/editEvent/{{event.event_id}}" class="ui mini basic button pull-right">Edit</a>
                         </td>
