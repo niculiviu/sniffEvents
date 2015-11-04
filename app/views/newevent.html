@@ -98,7 +98,7 @@
         <div class="col-sm-6">
             <div class="ui green message">Final: {{event.end_date | date:'dd-MM-yyyy'}} {{event.end_time | date:'shortTime' }}</div>
             <p class="input-group">
-                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="event.end_date" is-open="opened" close-text="Close" />
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="event.end_date" is-open="opened" close-text="Close" date-disabled="disabled(date, mode)" />
                 <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
@@ -180,7 +180,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="s in schandule">
+            <tr ng-repeat="s in schandule | orderBy:'s_date'">
                 <td>{{s.s_date | date}}</td>
                 <td>{{s.start_hour}} - {{s.end_hour}}</td>
                 <td>{{s.s_desc}}</td>

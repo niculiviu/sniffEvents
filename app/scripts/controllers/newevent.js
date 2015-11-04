@@ -30,10 +30,23 @@ angular.module('sniffyApp')
 
 
         }
+
+        $scope.$watch('event.start_date', function () {
+
+            if ($scope.event.start_date) {
+                $scope.event.end_date = $scope.event.start_date;
+                $scope.disabled = function (date, mode) {
+                    return (mode === 'day' && (date < $scope.event.start_date));
+                }
+            }
+
+        });
+
+
         $scope.map = {
             center: {
-                latitude: 40.1451,
-                longitude: -99.6680
+                latitude: 44.4278279,
+                longitude: 26.10389669999995
             },
             zoom: 4
         };
