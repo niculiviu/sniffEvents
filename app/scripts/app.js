@@ -10,7 +10,7 @@
  */
 angular
     .module('sniffyApp', [
-    'ngRoute', 'ui.bootstrap', 'uiGmapgoogle-maps', 'angularUtils.directives.dirPagination', 'chart.js'
+    'ngRoute', 'ui.bootstrap', 'uiGmapgoogle-maps', 'angularUtils.directives.dirPagination', 'chart.js','ngFileUpload'
   ])
     .config(function ($routeProvider) {
         $routeProvider

@@ -207,4 +207,7 @@
         <button class="ui fluid button" style="margin-bottom:10px;" ng-click="save_draft(event)">Salveaza ca draft</button>
         <button class="ui fluid blue button" ng-click="publish(event)">Publica</button>
     </div>
+    <div class="ui message">
+        <img src="services/images/{{event.event_id}}.png" class="img-responsive img-rounded">
+        <div class="ui blue fluid button" ngf-select="onFileSelect($file,event.event_id)">Upload event cover</div></div>
 </div>

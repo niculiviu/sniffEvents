@@ -8,7 +8,7 @@
  * Controller of the sniffyApp
  */
 angular.module('sniffyApp')
-    .controller('NeweventCtrl', function ($scope, eventService, $routeParams, orgService, $timeout, $modal, $location) {
+    .controller('NeweventCtrl', function ($scope, eventService, $routeParams, orgService, $timeout, $modal, $location,Upload) {
         console.log($routeParams);
         $scope.newEventButton = function () {
             $scope.newEventModal = $modal.open({
@@ -391,5 +391,22 @@ angular.module('sniffyApp')
                         $scope.program.splice(index, 1);
                 })
         }
+        
+        
+        $scope.onFileSelect = function($files,id) {
+            
+            console.log($files);
+            var file = $files;
+               
+            Upload.upload({
+                url: 'services/upload.php',
+                data: {fname: file.name,project_id:id},
+                file: file,
+              }).success(function(data, status, headers, config) {
+                // file is uploaded successfully
+                
+                
+              });
+            }
 
     });

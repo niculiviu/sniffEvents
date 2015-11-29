@@ -394,6 +394,33 @@
             echo 'Deleted';
         }
         
+         public function upload($file_size,$file_ext,$fname,$project_id,$file_tmp){
+            
+            
+            
+            $errors= array();
+            $extensions = array("jpeg","jpg","png");        
+            if(in_array($file_ext,$extensions)=== false){
+             $errors[]="image extension not allowed, please choose a JPEG or PNG file.";
+            }
+            if($file_size > 2097152){
+            $errors[]='File size cannot exceed 2 MB';
+            }               
+            if(empty($errors)==true){
+                if (!file_exists('images')) {
+                    mkdir('images', 0777, true);
+                }
+                
+                move_uploaded_file($file_tmp,"images/".$project_id.".png");
+               
+         
+                echo "UPLOADED";
+            }else{
+                print_r($errors);
+            }
+        
+        }
+        
         
     }
 ?>
