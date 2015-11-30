@@ -38,13 +38,13 @@
     </div>
     <div class="row">
         <div class="col-md-4 col-sm-6" ng-repeat="event in events | filter: search">
-            <div style="width:100%;height:200px;background-image:url('services/images/{{event.event_id}}.png');background-repeat: no-repeat;background-size: cover; background-position: center;padding:15px;">
-            <img src="images/cat/{{event.categoryName}}.png" height="40">
+            <div style="width:100%;height:200px;background-image:url('services/images/{{event.event_id}}.png');background-repeat: no-repeat;background-size: cover; background-position: center;padding:15px;border: 1px solid rgba(34, 36, 38, 0.15);">
+            <img src="images/cat/{{event.categoryName}}.png" height="40" >
             </div>
             
             <div class="ui segment" style="border-top: 2px solid {{event.color}};margin-bottom:10px;margin-top:0px;border-radius:0px;">
                 <a href="#/event/{{event.event_id}}">
-                    <h2>{{event.project_name}} @ {{event.location_name}}</h2></a>
+                    <h2 style="height: 60px; font-size:20px">{{event.project_name}} @ {{event.location_name}}</h2></a>
                 <small>Organizat de: {{event.org_name}}</small>
                 <br>
                 <!--<b>{{event.location_name}}</b>

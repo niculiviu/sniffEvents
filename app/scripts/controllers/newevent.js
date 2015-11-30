@@ -9,6 +9,7 @@
  */
 angular.module('sniffyApp')
     .controller('NeweventCtrl', function ($scope, eventService, $routeParams, orgService, $timeout, $modal, $location,Upload) {
+   
         console.log($routeParams);
         $scope.newEventButton = function () {
             $scope.newEventModal = $modal.open({
@@ -405,7 +406,8 @@ angular.module('sniffyApp')
               }).success(function(data, status, headers, config) {
                 // file is uploaded successfully
                 
-                
+                $scope.pictureUploaded=Math.random();
+                //$timeout(function(){$scope.pictureUploaded=true;},1000);
               });
             }
 
