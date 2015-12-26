@@ -4,8 +4,8 @@
        
         public function __construct(){
             try{
-                 $this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');
-            /*$this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');*/
+                 /*$this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');*/
+            $this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');
                 $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             }
             catch(PDOException $e){
@@ -241,6 +241,22 @@
             e.organizations_id=o.id AND 
             e.CreatedBy=u.id AND e.draft=1 AND e.enabled=1 AND
             e.end_date>= NOW()";
+         $query=$this->handler->prepare($sql);
+            
+         $query->execute();
+         $result=$query->fetchAll(PDO::FETCH_ASSOC);
+         
+         echo json_encode($result);
+        }
+        
+         public function search($event_name){
+         $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
+            FROM event e, eventcategory c, organization o,user u
+            WHERE 
+            e.eventCategory = c.id AND 
+            e.organizations_id=o.id AND 
+            e.CreatedBy=u.id AND e.draft=1 AND e.enabled=1 AND
+            e.project_name LIKE '%".$event_name."%'";
          $query=$this->handler->prepare($sql);
             
          $query->execute();

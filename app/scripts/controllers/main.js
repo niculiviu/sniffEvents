@@ -10,6 +10,9 @@
 angular.module('sniffyApp')
     .controller('MainCtrl', function ($scope, eventService) {
         $scope.page = 'home';
+    
+    eventService.search('test').success(function(response){
+    });
 
         eventService.publicEvents()
             .success(function (response) {

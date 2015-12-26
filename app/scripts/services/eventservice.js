@@ -70,6 +70,9 @@ angular.module('sniffyApp')
             },
             pastEvents: function () {
                 return $http.post('services/getPastEvents.php');
+            },
+            search:function(data){
+                return $http.post('services/search.php',{event_name:data});
             }
         };
     });
