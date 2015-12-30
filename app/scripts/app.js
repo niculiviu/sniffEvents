@@ -166,6 +166,10 @@ angular
                 controller: 'FaqCtrl',
                 controllerAs: 'faq'
             })
+            .when('/event/:event/favs', {
+              templateUrl: 'views/event/favs.html',
+              controller: 'EventFavsCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });

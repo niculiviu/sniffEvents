@@ -50,6 +50,15 @@
             echo "mobile_user_success";
         }
         
+        public function registerMobileAndroid($first,$last,$email,$pass,$gcm_id){
+            $sql="INSERT INTO user (first_name,last_name,email,pass,createdAt,rol,gcm_regid) VALUES (?,?,?,?,NOW(),'2',?)";
+            $query=$this->handler->prepare($sql);
+            
+            $query->execute(array($first,$last,$email,$pass,$gcm_id));
+            
+            echo "mobile_user_success";
+        }
+        
         public function login($username,$pass){
             
             try{

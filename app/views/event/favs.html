@@ -1,0 +1,41 @@
+<div admin-header></div>
+
+<div class="col-sm-2" style="padding:0px;">
+    <div style="padding:15px 15px 0px 15px;">
+        <b><i class="users icon"></i> Urmaritori ({{favs.length}})</b>
+    </div>
+    <div class="ui middle aligned selection list">
+  
+      <div class="item" ng-repeat="user in favs">
+        <img class="ui avatar image" src="images/profile.png">
+        <div class="content">
+          <div class="header">{{user.first_name}} {{user.last_name}}</div>
+        </div>
+      </div>
+
+    </div>
+</div>
+<div class="col-sm-10" style="padding:0px;">
+    <div style="position:fixed;width:80%;height:90%;border-left:solid 1px #ccc;border-right:solid 1px #ccc;">
+    <div class="page-header">
+        <h4 style="margin-left:15px;"><b>{{event.project_name}}</b> Trimite mesaj</h4>
+    </div>
+        <div style="padding:10px;">
+            <small class="grey"><i class="calendar icon"></i> 12/12/22</small>
+            <div class="ui green message" style="margin-top:2px;">
+                loolaskldkasd lskald askld kaslds k
+            </div>
+        </div>
+        <div style="position:absolute;bottom:0;width:100%;">
+            <div class="ui message" style="border-radius:0px;border:none;box-shadow:none;">
+                <form class="ui form">
+                    <textarea ng-model="message"></textarea>
+                </form>
+                
+                <div align="right">
+                    <div class="ui blue button" style="margin-top:15px;">Trimite</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

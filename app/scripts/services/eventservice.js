@@ -73,6 +73,12 @@ angular.module('sniffyApp')
             },
             search:function(data){
                 return $http.post('services/search.php',{event_name:data});
+            },
+            getAllFavMobile:function(data){
+                return $http.post('services/getAllFavMobile.php',{event:data});
+            },
+            sendNotif:function(data){
+                return $http.post('services/sendNotif.php',data);
             }
         };
     });

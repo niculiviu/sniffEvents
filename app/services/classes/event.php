@@ -14,11 +14,16 @@
             }
         }
         
-        public function joinEvent($event_id,$user_id,$action){
+        public function joinEvent($event_id,$user_id,$action,$gcm_regid){
             if($action==0){
                 $sql="INSERT INTO join_event (event_id,user_id) VALUES (?,?)";
                 $query=$this->handler->prepare($sql);
                 $query->execute(array($event_id,$user_id));
+                
+                /*$sql="UPDATE user SET gcm_regid=? WHERE id=?";
+                $query=$this->handler->prepare($sql);
+                $query->execute(array($gcm_regid,$user_id));*/
+                
                 echo 'inserted';
             }else{
                 $sql="DELETE FROM join_event WHERE event_id=? AND user_id=?;";
@@ -263,6 +268,16 @@
          $result=$query->fetchAll(PDO::FETCH_ASSOC);
          
          echo json_encode($result);
+        }
+        
+        public function getAllFavMobile($event_id){
+              $sql="SELECT * from user u,join_event j where u.id=j.user_id and j.event_id=?";
+              $query=$this->handler->prepare($sql);
+            
+              $query->execute(array($event_id));
+              $result=$query->fetchAll(PDO::FETCH_ASSOC);
+
+              echo json_encode($result);    
         }
         
         public function getFavorites($user_id){
