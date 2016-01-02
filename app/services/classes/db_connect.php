@@ -1,6 +1,8 @@
 <?php
   
 class DB_Connect {
+    
+    protected $handler;
   
     // constructor
     function __construct() {
@@ -14,20 +16,24 @@ class DB_Connect {
   
     // Connecting to database
     public function connect() {
-        require_once 'config.php';
+        
+        
+        
         // connecting to mysql
-        $con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+        //$con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
         // selecting database
-        mysql_select_db(DB_DATABASE);
+        //mysql_select_db(DB_DATABASE);
   
         // return database handler
-        return $con;
+        return  $this->handler;
     }
   
     // Closing database connection
     public function close() {
         mysql_close();
     }
+    
+    
   
 } 
 ?>

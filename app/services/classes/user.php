@@ -3,15 +3,24 @@
     class User{
         
          public function __construct(){
-            try{
-                $this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');
-                /*$this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');*/
-                $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            require_once 'config.php';
+         try{
+                 $this->handler = new PDO('mysql:host='.DB_HOST.';dbname='.DB_DATABASE,DB_USER,DB_PASSWORD);
+                 $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             }
             catch(PDOException $e){
                 echo $e->getMessage();
                 die();
             }
+             /*try{
+                $this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');
+                $this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');
+                $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+                die();
+            }*/
         }
        
         public function schimbaParola($id,$old,$pass){

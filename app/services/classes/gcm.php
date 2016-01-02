@@ -5,20 +5,32 @@ class GCM {
     //put your code here
     // constructor
     function __construct() {
-         
+         require_once 'config.php';
+         try{
+                 $this->handler = new PDO('mysql:host='.DB_HOST.';dbname='.DB_DATABASE,DB_USER,DB_PASSWORD);
+                 $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            }
+            catch(PDOException $e){
+                echo $e->getMessage();
+                die();
+            }
     }
  
     /**
      * Sending Push Notification
      */
-    public function send_notification($registatoin_ids, $message,$title) {
+    public function send_notification($registatoin_ids, $message,$title,$ev_id) {
         // include config
         include_once 'config.php';
+        
+                $sql="INSERT INTO messages (message,project_id,addedOn) VALUES (?,?,NOW())";
+                $query=$this->handler->prepare($sql);
+                $query->execute(array($message,$ev_id));
  
         // Set POST variables
         $url = 'https://android.googleapis.com/gcm/send';
         $fields = array(
-            'registration_ids' => array($registatoin_ids),
+            'registration_ids' => $registatoin_ids,
             'data' => array("text" => $message,"title"=>$title),
         );
  

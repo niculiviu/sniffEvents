@@ -1,12 +1,12 @@
 <?php 
     class Event{
         
-       
+       private $handler;
         public function __construct(){
-            try{
-                 $this->handler = new PDO('mysql:host=127.0.0.1;dbname=mobi','root','');
-            /*$this->handler = new PDO('mysql:host=localhost;dbname=asmiro_mobi','asmiro_mobi','liviu');*/
-                $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+         require_once 'config.php';
+         try{
+                 $this->handler = new PDO('mysql:host='.DB_HOST.';dbname='.DB_DATABASE,DB_USER,DB_PASSWORD);
+                 $this->handler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             }
             catch(PDOException $e){
                 echo $e->getMessage();
@@ -295,6 +295,17 @@
          
          echo json_encode($result);    
                 
+        }
+        
+        public function getProjectMessages($event_id){
+             $sql="SELECT * FROM messages m,join_event j,user u,event e
+WHERE j.event_id=e.event_id AND e.event_id=? AND m.project_id=j.event_id GROUP BY m.idmessage";
+             $query=$this->handler->prepare($sql);
+            
+             $query->execute(array($event_id));
+             $result=$query->fetchAll(PDO::FETCH_ASSOC);
+
+             echo json_encode($result);
         }
         
         public function getEventsByCategory($id){
