@@ -14,17 +14,23 @@
             }
         }
         
-        public function joinEvent($event_id,$user_id,$action,$gcm_regid){
+        public function joinEvent($event_id,$user_id,$action){
             if($action==0){
-                $sql="INSERT INTO join_event (event_id,user_id) VALUES (?,?)";
-                $query=$this->handler->prepare($sql);
-                $query->execute(array($event_id,$user_id));
+                $sqlV="SELECT * FROM join_event WHERE event_id=? AND user_id=?";
+                    $query=$this->handler->prepare($sqlV);
+                    $query->execute(array($event_id,$user_id));
+                    $result=$query->fetchAll(PDO::FETCH_ASSOC);
                 
-                /*$sql="UPDATE user SET gcm_regid=? WHERE id=?";
-                $query=$this->handler->prepare($sql);
-                $query->execute(array($gcm_regid,$user_id));*/
-                
-                echo 'inserted';
+                if(count($result)){
+                    $sql="DELETE FROM join_event WHERE event_id=? AND user_id=?;";
+                    $query=$this->handler->prepare($sql);
+                    $query->execute(array($event_id,$user_id));
+                    echo 'deleted';
+                }else{
+                    $sql="INSERT INTO join_event (event_id,user_id) VALUES (?,?)";
+                    $query=$this->handler->prepare($sql);
+                    $query->execute(array($event_id,$user_id));
+                    echo 'inserted';}
             }else{
                 $sql="DELETE FROM join_event WHERE event_id=? AND user_id=?;";
                 $query=$this->handler->prepare($sql);
@@ -255,13 +261,13 @@
         }
         
          public function search($event_name){
-         $sql="SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
+         $sql='SELECT e.event_id,e.project_name,e.start_date,e.end_date,e.location_name,e.description,e.address,o.org_name,u.first_name,u.last_name, c.categoryName,e.color,e.FbPage,e.start_time,e.end_time, DATEDIFF(e.start_date,NOW()) AS DiffDate,(SELECT COUNT(*) FROM program p WHERE e.event_id=p.event_id) as ProgNR, e.location_x,e.location_y
             FROM event e, eventcategory c, organization o,user u
             WHERE 
             e.eventCategory = c.id AND 
             e.organizations_id=o.id AND 
             e.CreatedBy=u.id AND e.draft=1 AND e.enabled=1 AND
-            e.project_name LIKE '%".$event_name."%'";
+            e.project_name LIKE "%'.$event_name.'%"';
          $query=$this->handler->prepare($sql);
             
          $query->execute();
@@ -299,13 +305,31 @@
         
         public function getProjectMessages($event_id){
              $sql="SELECT * FROM messages m,join_event j,user u,event e
-WHERE j.event_id=e.event_id AND e.event_id=? AND m.project_id=j.event_id GROUP BY m.idmessage";
+WHERE j.event_id=e.event_id AND j.event_id=? AND m.project_id=j.event_id GROUP BY m.idmessage";
              $query=$this->handler->prepare($sql);
             
              $query->execute(array($event_id));
              $result=$query->fetchAll(PDO::FETCH_ASSOC);
 
              echo json_encode($result);
+        }
+        
+        public function getAllMessages($id){
+            $sql="SELECT 
+                (SELECT COUNT(*) FROM messages me WHERE me.project_id=j.event_id) as msgNr, e.project_name,j.event_id
+                FROM messages m,join_event j,user u,event e
+                WHERE 
+                    j.event_id=e.event_id 
+                    AND m.project_id=j.event_id 
+                    AND j.user_id=? 
+                    GROUP BY e.event_id";
+            $query=$this->handler->prepare($sql);
+            
+             $query->execute(array($id));
+             $result=$query->fetchAll(PDO::FETCH_ASSOC);
+
+             echo json_encode($result);
+            
         }
         
         public function getEventsByCategory($id){
