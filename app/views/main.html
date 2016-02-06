@@ -38,75 +38,54 @@
         <a class="active item" ng-click="search_item('')" ng-class="search==''?'active':''">Toate</a>
         <a class="item" ng-repeat="cat in evCategories" ng-click="search_item(cat.categoryName)" ng-class="search==cat.categoryName?'active':''">{{cat.categoryName}}</a>
     </div>
-    <div class="row">
-        <div class="col-md-4 col-sm-6" ng-repeat="event in events | filter: search">
-            <div style="width:100%;height:200px;background-image:url('services/images/{{event.event_id}}.png');background-repeat: no-repeat;background-size: cover; background-position: center;padding:15px;border: 1px solid rgba(34, 36, 38, 0.15);">
-            <img src="images/cat/{{event.categoryName}}.png" height="40" >
+    <div >
+        <div >
+        <div class="ui link cards">
+          <div class="card" ng-repeat="event in events | filter: search" style="border: none;box-shadow: 0px 0px 10px lightgray;">
+            <div dimmed-image class="blurring dimmable image" style="width:100%;height:200px;background-image:url('services/images/{{event.event_id}}.png');background-repeat: no-repeat;background-size: cover; background-position: center;padding:15px;border: 1px solid rgba(34, 36, 38, 0.15);">
+             <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                      <img src="images/cat/{{event.categoryName}}.png"><br>
+                      <p>{{event.categoryName}}</p>
+                    <a href="#/event/{{event.event_id}}" class="ui inverted button">Detalii</a>
+                  </div>
+                </div>
+              </div>
+                
             </div>
-            
-            <div class="ui segment" style="border-top: 2px solid {{event.color}};margin-bottom:10px;margin-top:0px;border-radius:0px;">
-                <a href="#/event/{{event.event_id}}">
-                    <h2 style="height: 60px; font-size:20px">{{event.project_name}} @ {{event.location_name}}</h2></a>
-                <small>Organizat de: {{event.org_name}}</small>
-                <br>
-                <!--<b>{{event.location_name}}</b>
-                <p class="adresa">{{event.address}}</p>-->
-                <div class="ui divider"></div>
-                <div class="row">
-                    <div class="col-xs-6">
-                        <div class="date">
-                            <div class="ui label" ng-if="event.DiffDate>0">
+            <div class="content">
+              <div class="header">{{event.project_name}}</div>
+              <div class="meta">
+                <a>{{event.org_name}}</a>
+              </div>
+              <div class="description">
+                {{event.location_name}}
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="right floated">
+                <div ng-if="event.DiffDate>0">
                                 Incepe in {{event.DiffDate}} zile
                             </div>
                             <div class="ui label" ng-if="event.DiffDate<=0">
                                 In desfasurare
                             </div>
+              </span>
+              <span>
+                
+                <a href={{event.FbPage}} target="_blank" ng-if="event.FbPage"><i class="facebook icon"></i></a>
                            
-                        </div>
-                    </div>
-                    <div class="col-xs-6" style="padding-right: 10px">
-                        <div class="pull-right">
-                            <a class="ui facebook mini icon button" href={{event.FbPage}} target="_blank" ng-if="event.FbPage"><i class="facebook icon"></i></a>
-                           <!-- <div class="ui label">{{event.categoryName}}</div>-->
-                            
-                        </div>
-                        </div>
-                    </div>
-                </div>
+              </span>
             </div>
+          </div>
+        </div>
+        </div>
+        
+        
         </div>
     </div>
 
-
-    <!--<div class="page-header">
-        <h2>ARHIVA</h2>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-sm-6" ng-repeat="event in past">
-            <div class="ui segment" style="border-top: 2px solid {{event.color}};margin-bottom:10px;">
-                <a href="#/event/{{event.event_id}}">
-                    <h2>{{event.project_name}}</h2></a>
-                <small>Organizat de: {{event.org_name}}</small>
-                <br>
-                <b>{{event.location_name}}</b>
-                <p class="adresa">{{event.address}}</p>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-6">
-                        <div class="date">
-                            {{event.start_date|date:'dd/MM/yyyy'}} - {{event.end_date|date:'dd/MM/yyyy'}}
-                        </div>
-                    </div>
-                    <div class="col-xs-6" style="padding-right: 10px">
-                        <div class="pull-right">
-                            <a class="ui facebook mini icon button" href={{event.FbPage}} target="_blank" ng-if="event.FbPage"><i class="facebook icon"></i></a>
-                            <div class="ui label">{{event.categoryName}}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
 
 </div>
     </div>

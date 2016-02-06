@@ -40,23 +40,57 @@
         
         }
         public function register($first,$last,$email,$pass,$rol){
+            try{
+                
+                $sql="SELECT * FROM user WHERE email=?";
+                $query=$this->handler->prepare($sql);
+                $query->execute(array($email));
+                
+                $result=$query->fetchAll(PDO::FETCH_ASSOC);
+                
+                if(count($result)){
+                   echo "Exista";
+                }else{
+                    $sql="INSERT INTO user (first_name,last_name,email,pass,createdAt,rol) VALUES (?,?,?,?,NOW(),?)";
+                    $query=$this->handler->prepare($sql);
+
+                    $query->execute(array($first,$last,$email,$pass,$rol));
+
+                    echo "User INSERTED";
+                }
+            }catch(PDOException $e){
+                echo $e->getMessage();
+                die();
+            }
             
             
-            $sql="INSERT INTO user (first_name,last_name,email,pass,createdAt,rol) VALUES (?,?,?,?,NOW(),?)";
-            $query=$this->handler->prepare($sql);
-            
-            $query->execute(array($first,$last,$email,$pass,$rol));
-            
-            echo "User INSERTED";
         }
         
         public function registerMobile($first,$last,$email,$pass){
-            $sql="INSERT INTO user (first_name,last_name,email,pass,createdAt,rol) VALUES (?,?,?,?,NOW(),'2')";
-            $query=$this->handler->prepare($sql);
             
-            $query->execute(array($first,$last,$email,$pass));
+            try{
+                
+                $sql="SELECT * FROM user WHERE email=?";
+                $query=$this->handler->prepare($sql);
+                $query->execute(array($email));
+                
+                $result=$query->fetchAll(PDO::FETCH_ASSOC);
+                
+                if(count($result)){
+                   echo "Exista";
+                }else{
+                    $sql="INSERT INTO user (first_name,last_name,email,pass,createdAt,rol) VALUES (?,?,?,?,NOW(),'2')";
+                    $query=$this->handler->prepare($sql);
+
+                    $query->execute(array($first,$last,$email,$pass));
+
+                    echo "mobile_user_success";
+                }
+            }catch(PDOException $e){
+                echo $e->getMessage();
+                die();
+            }
             
-            echo "mobile_user_success";
         }
         
         public function registerMobileAndroid($first,$last,$email,$pass,$gcm_id){
